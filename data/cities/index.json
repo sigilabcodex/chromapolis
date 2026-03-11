@@ -1,0 +1,9 @@
+{
+  "cities": [
+    {
+      "slug": "lisbon",
+      "countryCode": "PT",
+      "file": "lisbon-pt.json"
+    }
+  ]
+}

@@ -4,6 +4,21 @@
       "slug": "lisbon",
       "countryCode": "PT",
       "file": "lisbon-pt.json"
+    },
+    {
+      "slug": "tokyo",
+      "countryCode": "JP",
+      "file": "tokyo-jp.json"
+    },
+    {
+      "slug": "nairobi",
+      "countryCode": "KE",
+      "file": "nairobi-ke.json"
+    },
+    {
+      "slug": "mexico-city",
+      "countryCode": "MX",
+      "file": "mexico-city-mx.json"
     }
   ]
 }

@@ -1,0 +1,50 @@
+{
+  "slug": "tokyo",
+  "name": "Tokyo",
+  "country": "Japan",
+  "countryCode": "JP",
+  "region": "Kanto",
+  "coordinates": {
+    "lat": 35.6764,
+    "lon": 139.65
+  },
+  "population": 13960000,
+  "palette": [
+    {
+      "hex": "#E5E2DA",
+      "name": "Concrete Mist",
+      "layer": "architectural",
+      "rationale": "Neutral concrete and stone tones dominate many streetscapes.",
+      "confidence": 0.82,
+      "official": false,
+      "prominence": 0.7
+    },
+    {
+      "hex": "#D72638",
+      "name": "Lantern Crimson",
+      "layer": "cultural",
+      "rationale": "Festival signage and shrines contribute recurring deep reds.",
+      "confidence": 0.86,
+      "official": false,
+      "prominence": 0.62
+    },
+    {
+      "hex": "#1F3A5F",
+      "name": "Night Rail Blue",
+      "layer": "editorial",
+      "rationale": "A stylized accent inspired by evening transit networks.",
+      "confidence": 0.6,
+      "official": false,
+      "prominence": 0.4
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tokyo Metropolitan Government",
+      "url": "https://www.metro.tokyo.lg.jp/english/",
+      "publisher": "Tokyo Metropolitan Government",
+      "sourceType": "government"
+    }
+  ],
+  "editorialSummary": "Tokyo combines muted infrastructure tones with vivid cultural accents and nocturnal editorial contrast."
+}

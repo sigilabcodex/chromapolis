@@ -1,0 +1,59 @@
+{
+  "slug": "lisbon",
+  "name": "Lisbon",
+  "country": "Portugal",
+  "countryCode": "PT",
+  "region": "Lisbon District",
+  "coordinates": {
+    "lat": 38.7223,
+    "lon": -9.1393
+  },
+  "population": 545923,
+  "palette": [
+    {
+      "hex": "#F2D398",
+      "name": "Limestone Cream",
+      "layer": "architectural",
+      "rationale": "Warm limestone facades and sunlit paved squares are common in central neighborhoods.",
+      "confidence": 0.85,
+      "official": false,
+      "prominence": 0.8
+    },
+    {
+      "hex": "#2D5A8C",
+      "name": "Azulejo Blue",
+      "layer": "cultural",
+      "rationale": "Blue-and-white azulejo tile traditions strongly influence Lisbon's visual identity.",
+      "confidence": 0.9,
+      "official": false,
+      "prominence": 0.75
+    },
+    {
+      "hex": "#D94E41",
+      "name": "Tram Red",
+      "layer": "editorial",
+      "rationale": "A high-contrast accent used editorially to represent transport energy and movement.",
+      "confidence": 0.65,
+      "official": false,
+      "prominence": 0.45
+    }
+  ],
+  "sources": [
+    {
+      "title": "Lisboa em Números",
+      "url": "https://www.lisboa.pt/",
+      "publisher": "Câmara Municipal de Lisboa",
+      "sourceType": "government",
+      "note": "Used for city background and demographic context."
+    },
+    {
+      "title": "Azulejos in Lisbon",
+      "url": "https://www.visitlisboa.com/en/p/azulejos",
+      "publisher": "Visit Lisboa",
+      "sourceType": "media",
+      "note": "Used to support interpretation of tile-driven color identity."
+    }
+  ],
+  "notes": "Initial draft record for data model validation.",
+  "editorialSummary": "Lisbon's palette combines stone warmth, Atlantic blues, and selective modern accents to balance factual material culture with editorial interpretation."
+}

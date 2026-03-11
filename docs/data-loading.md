@@ -13,7 +13,8 @@ Chromapolis uses a manifest-driven loader so city datasets are explicit, validat
 - `data/cities/<city>-<country>.json`
   - The city records.
 - `src/lib/dataLoader.ts`
-  - Loads records listed in the manifest.
+  - Builds a compile-time registry of all JSON city files under `data/cities`.
+  - Loads only records listed in the manifest.
   - Validates every record with `validateCityRecord`.
   - Exposes query helpers.
 
@@ -31,6 +32,9 @@ Chromapolis uses a manifest-driven loader so city datasets are explicit, validat
   - Returns an empty list when no results.
 - `getDataLoadDiagnostics()`
   - Lightweight diagnostics for validation and manifest issues.
+- `isCityDatasetHealthy()`
+  - Unit-like health signal for checks/tests.
+  - Returns `true` only when no load errors were recorded and at least one city was loaded.
 
 ## Validation and Graceful Failure
 
@@ -43,8 +47,12 @@ The loader handles data issues without crashing the app:
   - Entry is skipped and logged.
 - **Manifest and file metadata mismatch**
   - Entry is skipped if `slug` or `countryCode` disagree.
-- **Empty dataset**
-  - If the manifest has no entries (or all records are invalid), API calls return empty arrays / `null` as appropriate.
+- **Malformed or empty manifest**
+  - The dataset resolves to an empty list.
+  - APIs still return safe defaults (`[]` / `null`).
+- **Empty dataset after validation**
+  - APIs still return safe defaults (`[]` / `null`).
+  - Health checks report unhealthy via `isCityDatasetHealthy()`.
 
 Warnings are emitted with a `[dataLoader]` prefix to make issues easy to find during development.
 
@@ -54,4 +62,4 @@ Validation remains intentionally lightweight:
 
 - TypeScript types define the expected city shape.
 - `validateCityRecord` enforces core runtime constraints.
-- `getDataLoadDiagnostics()` provides a unit-like signal that can be asserted in tests later without introducing a heavy validation framework.
+- `getDataLoadDiagnostics()` and `isCityDatasetHealthy()` provide unit-like signals that can be asserted in tests later without introducing a heavy validation framework.

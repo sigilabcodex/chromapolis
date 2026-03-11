@@ -2,7 +2,6 @@ import type { City } from '../types/chromapolis';
 import { validateCityRecord } from './cityValidation';
 
 import cityManifest from '../../data/cities/index.json';
-import lisbonPt from '../../data/cities/lisbon-pt.json';
 
 interface CityManifestEntry {
   slug: string;
@@ -20,9 +19,21 @@ interface DataLoadDiagnostics {
   loadedEntries: number;
 }
 
-const cityFileRegistry: Record<string, unknown> = {
-  'lisbon-pt.json': lisbonPt,
-};
+const cityFileRegistry = Object.entries(
+  import.meta.glob('../../data/cities/*.json', {
+    eager: true,
+    import: 'default',
+  }),
+).reduce<Record<string, unknown>>((registry, [path, json]) => {
+  const fileName = path.split('/').pop();
+
+  if (!fileName || fileName === 'index.json') {
+    return registry;
+  }
+
+  registry[fileName] = json;
+  return registry;
+}, {});
 
 function normalizeCountryCode(value: string): string {
   return value.trim().toUpperCase();
@@ -156,4 +167,8 @@ export function getDataLoadDiagnostics(): DataLoadDiagnostics {
     invalidEntries: loadedData.diagnostics.invalidEntries,
     loadedEntries: loadedData.diagnostics.loadedEntries,
   };
+}
+
+export function isCityDatasetHealthy(): boolean {
+  return loadedData.diagnostics.errors.length === 0 && loadedData.cities.length > 0;
 }

@@ -3,9 +3,6 @@ import { validateCityRecord } from './cityValidation';
 
 import cityManifest from '../../data/cities/index.json';
 import lisbonPt from '../../data/cities/lisbon-pt.json';
-import tokyoJp from '../../data/cities/tokyo-jp.json';
-import nairobiKe from '../../data/cities/nairobi-ke.json';
-import mexicoCityMx from '../../data/cities/mexico-city-mx.json';
 
 interface CityManifestEntry {
   slug: string;
@@ -25,9 +22,6 @@ interface DataLoadDiagnostics {
 
 const cityFileRegistry: Record<string, unknown> = {
   'lisbon-pt.json': lisbonPt,
-  'tokyo-jp.json': tokyoJp,
-  'nairobi-ke.json': nairobiKe,
-  'mexico-city-mx.json': mexicoCityMx,
 };
 
 function normalizeCountryCode(value: string): string {

@@ -188,3 +188,40 @@ button {
   background: #273248;
   color: #fff;
 }
+
+.selection-note {
+  margin-top: 0.75rem;
+  color: #5a6272;
+  font-size: 0.9rem;
+}
+
+.editorial-summary {
+  font-size: 0.92rem;
+  color: #3e4657;
+  line-height: 1.5;
+}
+
+.tag.status {
+  margin: 0.5rem 0;
+}
+
+.status-verified {
+  background: #edf8f0;
+  border-color: #84c39a;
+}
+
+.status-mixed {
+  background: #f5f3ff;
+  border-color: #b9adff;
+}
+
+.status-provisional {
+  background: #fff4ea;
+  border-color: #f2ba7d;
+}
+
+.export-actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}

@@ -29,6 +29,13 @@ palettes. This MVP is intentionally lightweight and static-first.
 └── vite.config.ts
 ```
 
+
+## Data Model
+
+- TypeScript model: `src/types/chromapolis.ts`
+- Methodology and field documentation: `docs/data-model.md`
+- JSON schema and examples: `data/cities/`
+
 ## Setup
 
 ```bash

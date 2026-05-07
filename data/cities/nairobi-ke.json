@@ -1,0 +1,59 @@
+{
+  "slug": "nairobi",
+  "name": "Nairobi",
+  "country": "Kenya",
+  "countryCode": "KE",
+  "region": "Nairobi City County",
+  "coordinates": {
+    "lat": -1.2921,
+    "lon": 36.8219
+  },
+  "population": 4397073,
+  "palette": [
+    {
+      "hex": "#1F7A4D",
+      "name": "City Canopy Green",
+      "layer": "natural",
+      "rationale": "Green references Nairobi's parks, urban tree cover, and proximity to Nairobi National Park.",
+      "confidence": 0.76,
+      "official": false,
+      "prominence": 0.72
+    },
+    {
+      "hex": "#B86B2B",
+      "name": "Savanna Ochre",
+      "layer": "natural",
+      "rationale": "An editorial earth tone for savanna grasses, dry-season light, and surrounding highland soil.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.6
+    },
+    {
+      "hex": "#111820",
+      "name": "Harambee Black",
+      "layer": "symbolic",
+      "rationale": "Black is drawn from Kenya's national flag, a civic symbol frequently present in the capital.",
+      "confidence": 0.86,
+      "official": true,
+      "prominence": 0.52
+    }
+  ],
+  "sources": [
+    {
+      "title": "Nairobi City County",
+      "url": "https://nairobi.go.ke/",
+      "publisher": "Nairobi City County Government",
+      "sourceType": "government",
+      "note": "Used for official city and county context."
+    },
+    {
+      "title": "Kenya National Flag",
+      "url": "https://www.klrc.go.ke/index.php/constitution-of-kenya/164-schedules-schedules/second-schedule-national-symbols/435-a-the-national-flag",
+      "publisher": "Government of Kenya",
+      "sourceType": "government",
+      "note": "Used to distinguish the national-symbol black from editorial natural colors."
+    }
+  ],
+  "notes": "Seed record; natural tones are editorial, while black is treated as official national-symbol context.",
+  "editorialSummary": "Nairobi's starter palette balances green canopy, ochre savanna, and official national-symbol black for a city identity shaped by nature, government, and growth."
+}

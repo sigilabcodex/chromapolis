@@ -1,0 +1,59 @@
+{
+  "slug": "tokyo",
+  "name": "Tokyo",
+  "country": "Japan",
+  "countryCode": "JP",
+  "region": "Tokyo Metropolis",
+  "coordinates": {
+    "lat": 35.6762,
+    "lon": 139.6503
+  },
+  "population": 14094034,
+  "palette": [
+    {
+      "hex": "#1E8A5A",
+      "name": "Metropolitan Green",
+      "layer": "official",
+      "rationale": "The Tokyo metropolitan symbol is commonly presented in a vivid green associated with future growth.",
+      "confidence": 0.78,
+      "official": true,
+      "prominence": 0.62
+    },
+    {
+      "hex": "#2C7BB6",
+      "name": "Transit Blue",
+      "layer": "cultural",
+      "rationale": "A bright transport blue reflects station signage, rail systems, and the city's designed mobility layer.",
+      "confidence": 0.7,
+      "official": false,
+      "prominence": 0.68
+    },
+    {
+      "hex": "#2B2F3A",
+      "name": "Night Glass",
+      "layer": "architectural",
+      "rationale": "Dark glass and steel high-rises shape an editorial neutral for Tokyo's evening skyline.",
+      "confidence": 0.66,
+      "official": false,
+      "prominence": 0.56
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tokyo Metropolitan Government",
+      "url": "https://www.metro.tokyo.lg.jp/",
+      "publisher": "Tokyo Metropolitan Government",
+      "sourceType": "government",
+      "note": "Used for official metropolitan identity context."
+    },
+    {
+      "title": "Corporate Identity",
+      "url": "https://www.tokyometro.jp/lang_en/corporate/profile/ci/index.html",
+      "publisher": "Tokyo Metro Co., Ltd.",
+      "sourceType": "other",
+      "note": "Used as transport-brand context for the editorial transit blue."
+    }
+  ],
+  "notes": "Seed record with one official metropolitan identity color and two editorial urban-system colors.",
+  "editorialSummary": "Tokyo's starter palette combines metropolitan green, transport blue, and dark skyline glass to suggest civic identity, movement, and high-density night architecture."
+}

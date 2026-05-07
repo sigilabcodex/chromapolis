@@ -1,0 +1,59 @@
+{
+  "slug": "mexico-city",
+  "name": "Mexico City",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Ciudad de México",
+  "coordinates": {
+    "lat": 19.4326,
+    "lon": -99.1332
+  },
+  "population": 9209944,
+  "palette": [
+    {
+      "hex": "#006341",
+      "name": "Flag Green",
+      "layer": "official",
+      "rationale": "National flag green anchors civic identity across the capital's public ceremonies and monuments.",
+      "confidence": 0.9,
+      "official": true,
+      "prominence": 0.72
+    },
+    {
+      "hex": "#C1272D",
+      "name": "Nopal Red",
+      "layer": "symbolic",
+      "rationale": "A red accent references the Mexican flag and the city-origin Tenochtitlan eagle-and-nopal emblem.",
+      "confidence": 0.82,
+      "official": true,
+      "prominence": 0.66
+    },
+    {
+      "hex": "#D7B56D",
+      "name": "Cantera Gold",
+      "layer": "architectural",
+      "rationale": "Editorial warm stone tone for historic-center facades, plazas, and late-afternoon light.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.58
+    }
+  ],
+  "sources": [
+    {
+      "title": "Secretaría de Turismo de la Ciudad de México",
+      "url": "https://www.turismo.cdmx.gob.mx/",
+      "publisher": "Gobierno de la Ciudad de México",
+      "sourceType": "government",
+      "note": "Used for official tourism and civic context."
+    },
+    {
+      "title": "Símbolos Patrios",
+      "url": "https://sitios.segob.gob.mx/es/FomentoCivico/Simbolos_Patrios",
+      "publisher": "Secretaría de Gobernación",
+      "sourceType": "government",
+      "note": "Used to distinguish national-symbol colors from editorial city colors."
+    }
+  ],
+  "notes": "Seed record; official colors come from national symbols visible in the capital, while the stone tone is editorial.",
+  "editorialSummary": "Mexico City's starter palette pairs official national green and red with an editorial cantera gold for monumental stone, civic ceremony, and dense historic texture."
+}

@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { City, PaletteColor } from '../types/chromapolis';
+import { getPaletteCompleteness } from '../lib/paletteCompleteness';
 
 function slugify(value: string) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -79,6 +80,7 @@ export function PalettePanel({ city }: PalettePanelProps) {
   const paletteCss = useMemo(() => (city ? buildCssVariables(city) : ''), [city]);
   const paletteGpl = useMemo(() => (city ? buildGpl(city) : ''), [city]);
   const paletteAsePlaceholder = useMemo(() => (city ? buildAsePlaceholder(city) : ''), [city]);
+  const paletteCompleteness = city ? getPaletteCompleteness(city.palette.length) : '';
   const paletteLayerSummary = useMemo(() => {
     if (!city) return '';
 
@@ -125,7 +127,7 @@ export function PalettePanel({ city }: PalettePanelProps) {
           <h2 id="palette-heading">Palette Viewer</h2>
           <p>
             {city.name}, {city.country} · selected palette contains {city.palette.length}{' '}
-            color{city.palette.length === 1 ? '' : 's'}
+            color{city.palette.length === 1 ? '' : 's'} · {paletteCompleteness}
           </p>
           <p className="palette-size-note">Recommended editorial range: 1–9 colors.</p>
         </div>
@@ -154,7 +156,8 @@ export function PalettePanel({ city }: PalettePanelProps) {
           ))}
         </div>
         <p className="palette-overview-meta">
-          {city.palette.length} color{city.palette.length === 1 ? '' : 's'}
+          {city.palette.length} color{city.palette.length === 1 ? '' : 's'} ·{' '}
+          <span className="completeness-label">{paletteCompleteness}</span>
           {paletteLayerSummary ? ` · ${paletteLayerSummary}` : ''}
         </p>
       </div>

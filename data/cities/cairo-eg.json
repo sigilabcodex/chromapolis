@@ -1,0 +1,95 @@
+{
+  "slug": "cairo",
+  "name": "Cairo",
+  "country": "Egypt",
+  "countryCode": "EG",
+  "region": "Cairo Governorate",
+  "coordinates": {
+    "lat": 30.0444,
+    "lon": 31.2357
+  },
+  "population": 10100000,
+  "palette": [
+    {
+      "hex": "#D8B46A",
+      "name": "Desert Limestone",
+      "layer": "natural",
+      "rationale": "Warm limestone and desert light form the most legible neutral base for Cairo.",
+      "confidence": 0.78,
+      "official": false,
+      "prominence": 0.74
+    },
+    {
+      "hex": "#1F6F8B",
+      "name": "Nile Blue",
+      "layer": "natural",
+      "rationale": "A deep river blue anchors the city to the Nile corridor and waterfront life.",
+      "confidence": 0.72,
+      "official": false,
+      "prominence": 0.58
+    },
+    {
+      "hex": "#B45F2A",
+      "name": "Cairene Dust",
+      "layer": "architectural",
+      "rationale": "Ochre-brown captures weathered masonry, dust, and warm urban fabric.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.52
+    },
+    {
+      "hex": "#C9A227",
+      "name": "Museum Gold",
+      "layer": "historical",
+      "rationale": "Muted gold references pharaonic artifacts and museum collections without becoming a flag claim.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#111111",
+      "name": "Flag Black",
+      "layer": "symbolic",
+      "rationale": "Black comes from Egyptian national-symbol context visible in the capital.",
+      "confidence": 0.82,
+      "official": true,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#CE1126",
+      "name": "Flag Red",
+      "layer": "symbolic",
+      "rationale": "Red comes from Egyptian national-symbol context and is not a Cairo-specific official color.",
+      "confidence": 0.82,
+      "official": true,
+      "prominence": 0.32
+    },
+    {
+      "hex": "#EFE6D1",
+      "name": "Mosque Stone",
+      "layer": "architectural",
+      "rationale": "A light stone tone supports historic mosque courtyards, facades, and sunlit streets.",
+      "confidence": 0.56,
+      "official": false,
+      "prominence": 0.44
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tourism",
+      "url": "https://www.cairo.gov.eg/en/Tourism/Pages/default.aspx",
+      "publisher": "Official Portal of Cairo Governorate",
+      "sourceType": "government",
+      "note": "Used for official city tourism context."
+    },
+    {
+      "title": "Historic Cairo",
+      "url": "https://whc.unesco.org/en/list/89/",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for historic urban and architectural context."
+    }
+  ],
+  "notes": "Complete starter record; national flag colors are symbolic official context, while material and landscape colors are editorial.",
+  "editorialSummary": "Cairo's complete palette layers desert limestone, Nile blue, ochre dust, museum gold, Egyptian symbolic red and black, and mosque-stone neutrals."
+}

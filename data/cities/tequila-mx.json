@@ -1,0 +1,86 @@
+{
+  "slug": "tequila",
+  "name": "Tequila",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Jalisco",
+  "coordinates": {
+    "lat": 20.8819,
+    "lon": -103.8357
+  },
+  "population": 44408,
+  "palette": [
+    {
+      "hex": "#5E8FA3",
+      "name": "Blue Agave",
+      "layer": "natural",
+      "rationale": "Blue-gray agave fields are the dominant landscape reference around Tequila.",
+      "confidence": 0.82,
+      "official": false,
+      "prominence": 0.78
+    },
+    {
+      "hex": "#A65F2B",
+      "name": "Volcanic Earth",
+      "layer": "natural",
+      "rationale": "Warm reddish-brown soil and volcanic context ground the agave landscape.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.56
+    },
+    {
+      "hex": "#F2C14E",
+      "name": "Añejo Gold",
+      "layer": "cultural",
+      "rationale": "Golden spirit and barrel-aging associations provide a clear product-culture accent.",
+      "confidence": 0.7,
+      "official": false,
+      "prominence": 0.54
+    },
+    {
+      "hex": "#F4E1B6",
+      "name": "Pueblo Stucco",
+      "layer": "architectural",
+      "rationale": "Light stucco walls help translate the town center into a flexible neutral.",
+      "confidence": 0.55,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#2F5D50",
+      "name": "Sierra Green",
+      "layer": "natural",
+      "rationale": "A deeper green references the surrounding slopes and cultivated valley edges.",
+      "confidence": 0.54,
+      "official": false,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#6B3F2A",
+      "name": "Barrel Oak",
+      "layer": "cultural",
+      "rationale": "Oak brown adds a restrained distillery and barrel-room layer for product-adjacent design.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.38
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tequila, Jalisco",
+      "url": "https://www.gob.mx/sectur/articulos/tequila-jalisco",
+      "publisher": "Secretaría de Turismo, Gobierno de México",
+      "sourceType": "government",
+      "note": "Used for Pueblo Mágico and tourism context."
+    },
+    {
+      "title": "Agave Landscape and Ancient Industrial Facilities of Tequila",
+      "url": "https://whc.unesco.org/en/list/1209/",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for agave landscape and industrial heritage context."
+    }
+  ],
+  "notes": "Standard starter record; colors are editorial interpretations of landscape, architecture, and tequila culture, not official municipal colors.",
+  "editorialSummary": "Tequila's standard palette turns agave blue, volcanic earth, añejo gold, pueblo stucco, sierra green, and barrel oak into a practical heritage-and-product color system."
+}

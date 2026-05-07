@@ -14,7 +14,7 @@
       "hex": "#1E8A5A",
       "name": "Metropolitan Green",
       "layer": "official",
-      "rationale": "The Tokyo metropolitan symbol is commonly presented in a vivid green associated with future growth.",
+      "rationale": "The Tokyo metropolitan symbol is commonly presented in a vivid green associated with growth.",
       "confidence": 0.78,
       "official": true,
       "prominence": 0.62
@@ -23,10 +23,55 @@
       "hex": "#2B2F3A",
       "name": "Night Glass",
       "layer": "architectural",
-      "rationale": "Dark glass and steel high-rises shape an editorial neutral for Tokyo's evening skyline.",
+      "rationale": "Dark glass and steel high-rises shape a useful neutral for Tokyo's evening skyline.",
       "confidence": 0.66,
       "official": false,
       "prominence": 0.56
+    },
+    {
+      "hex": "#E84A5F",
+      "name": "Signal Red",
+      "layer": "editorial",
+      "rationale": "A bright urban accent captures crossings, signage, and high-density visual rhythm without official status.",
+      "confidence": 0.52,
+      "official": false,
+      "prominence": 0.4
+    },
+    {
+      "hex": "#F7D6E0",
+      "name": "Sakura Mist",
+      "layer": "natural",
+      "rationale": "Soft blossom pink adds a seasonal layer that is culturally legible but not year-round dominant.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.36
+    },
+    {
+      "hex": "#536DFE",
+      "name": "Transit Blue",
+      "layer": "editorial",
+      "rationale": "Cool electric blue supports Tokyo's rail-and-wayfinding identity as an editorial mobility cue.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#C8B273",
+      "name": "Temple Gold",
+      "layer": "cultural",
+      "rationale": "Muted gold references shrine and temple details within the larger contemporary city fabric.",
+      "confidence": 0.55,
+      "official": false,
+      "prominence": 0.3
+    },
+    {
+      "hex": "#D9D5CC",
+      "name": "Concrete Pearl",
+      "layer": "architectural",
+      "rationale": "A light concrete neutral balances the palette for stations, streetscapes, and dense mixed-use blocks.",
+      "confidence": 0.6,
+      "official": false,
+      "prominence": 0.48
     }
   ],
   "sources": [
@@ -42,9 +87,9 @@
       "url": "https://www.tokyometro.jp/lang_en/corporate/profile/ci/index.html",
       "publisher": "Tokyo Metro Co., Ltd.",
       "sourceType": "other",
-      "note": "Retained as transport-brand context for future mobility-layer refinement."
+      "note": "Used as transport-brand context for mobility-layer interpretation."
     }
   ],
-  "notes": "Seed record with one official metropolitan identity color and one editorial urban-system color; intentionally compact to exercise short palettes.",
-  "editorialSummary": "Tokyo's compact starter palette combines official metropolitan green with dark skyline glass to suggest civic identity and high-density night architecture."
+  "notes": "Complete seed record with one official metropolitan identity color and editorial urban, seasonal, cultural, and mobility layers.",
+  "editorialSummary": "Tokyo's complete starter palette pairs official metropolitan green with night glass, signal color, sakura softness, transit blue, temple gold, and concrete neutrals."
 }

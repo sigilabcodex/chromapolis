@@ -1,0 +1,59 @@
+{
+  "slug": "cuautla",
+  "name": "Cuautla",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Morelos",
+  "coordinates": {
+    "lat": 18.8126,
+    "lon": -98.9548
+  },
+  "population": 187118,
+  "palette": [
+    {
+      "hex": "#B9552F",
+      "name": "Heroic Brick",
+      "layer": "historical",
+      "rationale": "A brick-red editorial tone references Cuautla's independence-era memory and historic-center masonry.",
+      "confidence": 0.48,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#2F7D54",
+      "name": "Morelos Garden Green",
+      "layer": "natural",
+      "rationale": "Warm-climate planting and irrigated gardens provide the clearest everyday color layer.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#E7D3A1",
+      "name": "Sunlit Stucco",
+      "layer": "architectural",
+      "rationale": "A light stucco neutral supports colonial walls, plazas, and bright Morelos daylight.",
+      "confidence": 0.46,
+      "official": false,
+      "prominence": 0.44
+    }
+  ],
+  "sources": [
+    {
+      "title": "Cuautla Oficial",
+      "url": "https://cuautla.gob.mx/",
+      "publisher": "Gobierno Municipal de Cuautla",
+      "sourceType": "government",
+      "note": "Used for official municipal identity and civic context."
+    },
+    {
+      "title": "Cuautla",
+      "url": "https://lugares.inah.gob.mx/es/node/4842",
+      "publisher": "Instituto Nacional de Antropología e Historia",
+      "sourceType": "government",
+      "note": "Used for independence-history and tourism context."
+    }
+  ],
+  "notes": "Minimal starter record intended for later sourcing review; no official city colors are claimed.",
+  "editorialSummary": "Cuautla's minimal palette gives designers a cautious starting point: historic brick, garden green, and sunlit stucco, all treated as editorial until stronger local sources are added."
+}

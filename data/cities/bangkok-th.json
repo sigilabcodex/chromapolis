@@ -1,0 +1,104 @@
+{
+  "slug": "bangkok",
+  "name": "Bangkok",
+  "country": "Thailand",
+  "countryCode": "TH",
+  "region": "Bangkok Metropolitan Region",
+  "coordinates": {
+    "lat": 13.7563,
+    "lon": 100.5018
+  },
+  "population": 5527000,
+  "palette": [
+    {
+      "hex": "#F3C13A",
+      "name": "Temple Gold",
+      "layer": "cultural",
+      "rationale": "Gold is a dominant visual cue in temple ornament, palace details, and ceremonial architecture.",
+      "confidence": 0.78,
+      "official": false,
+      "prominence": 0.72
+    },
+    {
+      "hex": "#0F5E9C",
+      "name": "Chao Phraya Blue",
+      "layer": "natural",
+      "rationale": "River blue anchors Bangkok's waterways, transit, and historic settlement pattern.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.56
+    },
+    {
+      "hex": "#C23B22",
+      "name": "Roof Tile Red",
+      "layer": "architectural",
+      "rationale": "Red-orange roof tiles add a recognizable temple and old-city architectural accent.",
+      "confidence": 0.64,
+      "official": false,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#2D7D46",
+      "name": "Tropical Green",
+      "layer": "natural",
+      "rationale": "A saturated green represents tropical planting, canalside vegetation, and park shade.",
+      "confidence": 0.57,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#F5E6C8",
+      "name": "Palace Cream",
+      "layer": "architectural",
+      "rationale": "Warm cream balances ornate gold and red with palace walls and sunlit stucco.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#6B3FA0",
+      "name": "Royal Purple",
+      "layer": "symbolic",
+      "rationale": "Purple is used editorially as a ceremonial accent and should not be read as an official city color.",
+      "confidence": 0.42,
+      "official": false,
+      "prominence": 0.24
+    },
+    {
+      "hex": "#2B2F38",
+      "name": "Skytrain Graphite",
+      "layer": "editorial",
+      "rationale": "A dark transit neutral supports elevated rail, roads, and contemporary commercial districts.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.38
+    },
+    {
+      "hex": "#E45D8B",
+      "name": "Market Pink",
+      "layer": "cultural",
+      "rationale": "Bright market color gives designers a small high-energy accent for food, flowers, and night streets.",
+      "confidence": 0.44,
+      "official": false,
+      "prominence": 0.26
+    }
+  ],
+  "sources": [
+    {
+      "title": "Visit Bangkok",
+      "url": "https://visit.bangkok.go.th/",
+      "publisher": "Bangkok Metropolitan Administration",
+      "sourceType": "government",
+      "note": "Used for official city tourism context."
+    },
+    {
+      "title": "Tourism Authority of Thailand",
+      "url": "https://www.tat.or.th/en",
+      "publisher": "Tourism Authority of Thailand",
+      "sourceType": "government",
+      "note": "Used for national tourism and landmark context."
+    }
+  ],
+  "notes": "Complete starter record; all colors are editorial readings of architecture, landscape, transit, and culture, with no official municipal color claim.",
+  "editorialSummary": "Bangkok's complete palette mixes temple gold, river blue, roof red, tropical green, palace cream, ceremonial purple, transit graphite, and market pink."
+}

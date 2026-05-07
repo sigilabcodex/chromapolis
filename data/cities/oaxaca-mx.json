@@ -1,0 +1,59 @@
+{
+  "slug": "oaxaca",
+  "name": "Oaxaca",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Oaxaca",
+  "coordinates": {
+    "lat": 17.0732,
+    "lon": -96.7266
+  },
+  "population": 270955,
+  "palette": [
+    {
+      "hex": "#7E9F7A",
+      "name": "Verde Cantera",
+      "layer": "architectural",
+      "rationale": "Greenish quarry stone is a common reading of Oaxaca's historic churches and civic facades.",
+      "confidence": 0.74,
+      "official": false,
+      "prominence": 0.76
+    },
+    {
+      "hex": "#6B3A2A",
+      "name": "Mole Cacao",
+      "layer": "cultural",
+      "rationale": "A deep brown editorial tone references Oaxacan mole, cacao, markets, and food culture.",
+      "confidence": 0.72,
+      "official": false,
+      "prominence": 0.58
+    },
+    {
+      "hex": "#C65A2E",
+      "name": "Guelaguetza Clay",
+      "layer": "cultural",
+      "rationale": "A warm clay accent evokes textiles, ceramics, festival dress, and surrounding valley earth.",
+      "confidence": 0.66,
+      "official": false,
+      "prominence": 0.54
+    }
+  ],
+  "sources": [
+    {
+      "title": "Historic Centre of Oaxaca and Archaeological Site of Monte Albán",
+      "url": "https://whc.unesco.org/en/list/415/",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for historic urban and architectural context."
+    },
+    {
+      "title": "Visit Oaxaca",
+      "url": "https://www.oaxaca.travel/",
+      "publisher": "Secretaría de Turismo del Estado de Oaxaca",
+      "sourceType": "government",
+      "note": "Used for cultural and tourism context."
+    }
+  ],
+  "notes": "Seed record uses editorial cultural and architectural colors; no official city colors are claimed.",
+  "editorialSummary": "Oaxaca's starter palette leans into green cantera, cacao brown, and clay warmth to make its historic stone, food culture, and craft traditions designer-readable."
+}

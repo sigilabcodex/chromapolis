@@ -9,7 +9,7 @@ function buildCssVariables(city: City) {
   const body = city.palette
     .map((color, index) => {
       const slug = slugify(color.name);
-      return `  --city-${index + 1}-${slug}: ${color.hex};`;
+      return `  --chromapolis-${city.slug}-${index + 1}-${slug}: ${color.hex};`;
     })
     .join('\n');
 
@@ -50,11 +50,11 @@ function buildPaletteJson(city: City) {
 
 function buildAsePlaceholder(city: City) {
   return [
-    'ASE_PLACEHOLDER',
+    'ASE_TEXT_PLACEHOLDER',
     `City: ${city.name}`,
     `Country: ${city.country}`,
     ...city.palette.map((color) => `${color.name}=${color.hex}`),
-    'Note: Replace this placeholder with binary ASE generation in a future iteration.',
+    'Note: This is a plain-text placeholder, not a binary Adobe Swatch Exchange (.ase) file yet.',
   ].join('\n');
 }
 
@@ -174,9 +174,9 @@ export function PalettePanel({ city }: PalettePanelProps) {
         <button
           type="button"
           onClick={() => exportFile('ase.txt', paletteAsePlaceholder, 'text/plain')}
-          title="Placeholder text export for future ASE binary support"
+          title="Downloads a plain-text placeholder, not a binary Adobe Swatch Exchange file yet"
         >
-          ASE
+          ASE placeholder (.txt)
         </button>
         <button type="button" onClick={() => exportFile('gpl', paletteGpl, 'text/plain')}>
           GPL

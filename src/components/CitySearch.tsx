@@ -10,14 +10,22 @@ interface CitySearchProps {
 export function CitySearch({ cities, selectedCitySlug, onSelectCity }: CitySearchProps) {
   const [query, setQuery] = useState('');
 
+  const sortedCities = useMemo(
+    () =>
+      [...cities].sort((a, b) =>
+        `${a.name}, ${a.country}`.localeCompare(`${b.name}, ${b.country}`),
+      ),
+    [cities],
+  );
+
   const filteredCities = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase();
 
     if (!normalizedQuery) {
-      return cities;
+      return sortedCities;
     }
 
-    return cities.filter((city) => {
+    return sortedCities.filter((city) => {
       const searchable = [city.name, city.country, city.countryCode, city.region]
         .filter(Boolean)
         .join(' ')
@@ -25,7 +33,10 @@ export function CitySearch({ cities, selectedCitySlug, onSelectCity }: CitySearc
 
       return searchable.includes(normalizedQuery);
     });
-  }, [cities, query]);
+  }, [query, sortedCities]);
+
+  const selectedCityIsVisible = filteredCities.some((city) => city.slug === selectedCitySlug);
+  const selectValue = selectedCityIsVisible ? selectedCitySlug : '';
 
   function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -53,31 +64,38 @@ export function CitySearch({ cities, selectedCitySlug, onSelectCity }: CitySearc
       </div>
 
       <label className="select-label" htmlFor="city-select">
-        Available cities
+        Available cities ({cities.length})
       </label>
       <select
         id="city-select"
-        value={selectedCitySlug}
-        onChange={(event) => onSelectCity(event.target.value)}
+        value={selectValue}
+        onChange={(event) => {
+          if (event.target.value) {
+            onSelectCity(event.target.value);
+          }
+        }}
         disabled={cities.length === 0}
       >
         {cities.length === 0 ? (
           <option value="">No valid cities loaded</option>
         ) : filteredCities.length === 0 ? (
-          <option value={selectedCitySlug}>No matching cities</option>
+          <option value="">No matching cities</option>
         ) : (
-          filteredCities.map((city) => (
-            <option key={city.slug} value={city.slug}>
-              {city.name}, {city.country}
-            </option>
-          ))
+          <>
+            {!selectedCityIsVisible ? <option value="">Select a matching city</option> : null}
+            {filteredCities.map((city) => (
+              <option key={city.slug} value={city.slug}>
+                {city.name}, {city.countryCode} — {city.country}
+              </option>
+            ))}
+          </>
         )}
       </select>
 
       <p className="search-help" aria-live="polite">
         {cities.length === 0
           ? 'No valid city records are available yet.'
-          : `${filteredCities.length} of ${cities.length} city record${cities.length === 1 ? '' : 's'} shown.`}
+          : `${filteredCities.length} of ${cities.length} city record${cities.length === 1 ? '' : 's'} shown. Use search to filter by city, country, code, or region.`}
       </p>
     </form>
   );

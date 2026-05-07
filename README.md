@@ -16,8 +16,9 @@ and renders palette exports in the browser.
   validation before records are exposed to the UI.
 - UI: available city records can be searched/selected locally, and the visible
   palette panel updates from the loaded dataset.
-- Exports: JSON, CSS variables, GPL palette text, HEX copy, and a text ASE
-  placeholder are available from the palette panel.
+- Exports: JSON, city-scoped CSS variables, GPL palette text, HEX copy,
+  and a clearly labeled plain-text ASE placeholder are available from the
+  palette panel.
 
 ## Principles
 
@@ -143,6 +144,15 @@ diagnostics in the UI and browser console.
 5. Keep records human-reviewable: cite sources, distinguish official colors from
    editorial interpretation with the `official` flag, and use confidence and
    prominence values to document uncertainty.
+
+## Export Notes
+
+- CSS exports use city-scoped variable names such as
+  `--chromapolis-lisbon-1-limestone-cream` to make pasted palettes safer in
+  multi-city design systems.
+- The ASE control currently downloads a plain-text `.ase.txt` placeholder only;
+  it is intentionally labeled as a placeholder until real binary Adobe Swatch
+  Exchange generation is implemented.
 
 ## Scripts
 

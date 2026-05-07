@@ -1,3 +1,4 @@
+import { VisualAtlas } from './VisualAtlas';
 import type { DataLoadDiagnostics } from '../lib/dataLoader';
 import type { City } from '../types/chromapolis';
 
@@ -5,17 +6,21 @@ interface ExploreSectionProps {
   cities: City[];
   selectedCity: City | null;
   diagnostics: DataLoadDiagnostics;
+  onSelectCity: (slug: string) => void;
 }
 
-export function ExploreSection({ cities, selectedCity, diagnostics }: ExploreSectionProps) {
+export function ExploreSection({ cities, selectedCity, diagnostics, onSelectCity }: ExploreSectionProps) {
   const hasDiagnostics = diagnostics.errors.length > 0;
 
   return (
     <section className="panel" aria-labelledby="explore-heading">
-      <h2 id="explore-heading">Explore</h2>
+      <h2 id="explore-heading">Visual Atlas</h2>
       <p>
-        Browse the static city dataset and select a record to update the palette viewer.
+        Browse the manifest-driven city dataset on a lightweight static world-plane atlas.
+        Markers use each record's latitude and longitude and update the palette viewer when selected.
       </p>
+
+      <VisualAtlas cities={cities} selectedCity={selectedCity} onSelectCity={onSelectCity} />
 
       <dl className="dataset-summary">
         <div>

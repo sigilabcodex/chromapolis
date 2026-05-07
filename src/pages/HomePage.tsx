@@ -48,7 +48,12 @@ export function HomePage() {
 
       {activeView === 'explore' ? (
         <section className="grid">
-          <ExploreSection cities={cities} selectedCity={selectedCity} diagnostics={diagnostics} />
+          <ExploreSection
+            cities={cities}
+            selectedCity={selectedCity}
+            diagnostics={diagnostics}
+            onSelectCity={setSelectedCitySlug}
+          />
           <PalettePanel city={selectedCity} />
         </section>
       ) : (

@@ -36,6 +36,15 @@
       "confidence": 0.65,
       "official": false,
       "prominence": 0.45
+    },
+    {
+      "hex": "#F6E7D0",
+      "name": "Calcada Light",
+      "layer": "architectural",
+      "rationale": "A pale editorial neutral references calçada paving, sun glare, and the bright pedestrian surfaces of central Lisbon.",
+      "confidence": 0.7,
+      "official": false,
+      "prominence": 0.52
     }
   ],
   "sources": [
@@ -54,6 +63,6 @@
       "note": "Used to support interpretation of tile-driven color identity."
     }
   ],
-  "notes": "Initial draft record for data model validation.",
-  "editorialSummary": "Lisbon's palette combines stone warmth, Atlantic blues, and selective modern accents to balance factual material culture with editorial interpretation."
+  "notes": "Seed record for data model validation; all colors are source-informed or editorial interpretations, with no official city color claim.",
+  "editorialSummary": "Lisbon's palette combines stone warmth, azulejo blue, calçada brightness, and a selective transport accent to balance material culture with editorial interpretation."
 }

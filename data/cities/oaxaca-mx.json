@@ -36,6 +36,51 @@
       "confidence": 0.66,
       "official": false,
       "prominence": 0.54
+    },
+    {
+      "hex": "#E7B75F",
+      "name": "Marigold Market",
+      "layer": "cultural",
+      "rationale": "A golden editorial accent references marigolds, market produce, and festival color without claiming official status.",
+      "confidence": 0.63,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#4B2E83",
+      "name": "Textile Indigo",
+      "layer": "cultural",
+      "rationale": "A deep violet-blue editorial color nods to woven textiles, dyed threads, and craft display palettes.",
+      "confidence": 0.57,
+      "official": false,
+      "prominence": 0.38
+    },
+    {
+      "hex": "#F2E2C4",
+      "name": "Plaza Stucco",
+      "layer": "architectural",
+      "rationale": "A warm stucco neutral reflects sunlit walls and pedestrian plazas in the historic center.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#1D6A5C",
+      "name": "Agave Green",
+      "layer": "natural",
+      "rationale": "An editorial green links surrounding valley vegetation, agave, and regional mezcal culture.",
+      "confidence": 0.6,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#A83E32",
+      "name": "Cochineal Red",
+      "layer": "historical",
+      "rationale": "A red editorial tone references the historic importance of cochineal dye and regional color craft.",
+      "confidence": 0.56,
+      "official": false,
+      "prominence": 0.34
     }
   ],
   "sources": [
@@ -54,6 +99,6 @@
       "note": "Used for cultural and tourism context."
     }
   ],
-  "notes": "Seed record uses editorial cultural and architectural colors; no official city colors are claimed.",
-  "editorialSummary": "Oaxaca's starter palette leans into green cantera, cacao brown, and clay warmth to make its historic stone, food culture, and craft traditions designer-readable."
+  "notes": "Seed record uses editorial cultural, natural, historical, and architectural colors; no official city colors are claimed.",
+  "editorialSummary": "Oaxaca's expanded starter palette leans into green cantera, cacao, clay, markets, textiles, stucco, agave, and dye history to make its historic stone, food culture, and craft traditions designer-readable."
 }

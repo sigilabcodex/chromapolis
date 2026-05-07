@@ -119,8 +119,10 @@ export function PalettePanel({ city }: PalettePanelProps) {
         <div>
           <h2 id="palette-heading">Palette Viewer</h2>
           <p>
-            {city.name}, {city.country} · {city.palette.length} colors
+            {city.name}, {city.country} · selected palette contains {city.palette.length}{' '}
+            color{city.palette.length === 1 ? '' : 's'}
           </p>
+          <p className="palette-size-note">Recommended editorial range: 1–9 colors.</p>
         </div>
         <div className="palette-actions">
           <button type="button" onClick={() => copyText(paletteJson, 'Palette JSON copied.')}>

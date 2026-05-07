@@ -9,13 +9,14 @@ and renders palette exports in the browser.
 
 ## Current Project Status
 
-- Version: `0.1.0`, preparing the `v0.2 Public Demo / GitHub Pages` milestone.
-- App shape: static-first frontend only; no backend, login, analytics, or map
-  library.
+- Version: `0.1.0`, with the app moving through a focused `v0.3 Flexible
+  Palettes + Visual Atlas` slice.
+- App shape: static-first frontend only; no backend, login, analytics, or heavy
+  map library.
 - Dataset: manifest-driven city records in `data/cities/` with runtime
   validation before records are exposed to the UI.
-- UI: available city records can be searched/selected locally, and the visible
-  palette panel updates from the loaded dataset.
+- UI: available city records can be searched/selected locally, selected from a
+  lightweight SVG/CSS visual atlas, and viewed in the palette panel.
 - Exports: JSON, city-scoped CSS variables, GPL palette text, HEX copy,
   and a clearly labeled plain-text ASE placeholder are available from the
   palette panel.
@@ -125,7 +126,8 @@ diagnostics in the UI and browser console.
    - stable lowercase `slug`,
    - city and country metadata,
    - coordinates,
-   - one or more palette colors,
+   - one or more palette colors; the schema allows palettes from 1 color upward,
+     and the recommended editorial range is 1–9 colors,
    - one or more source references,
    - an `editorialSummary`.
 3. Add the file to `data/cities/index.json`:
@@ -145,8 +147,21 @@ diagnostics in the UI and browser console.
    editorial interpretation with the `official` flag, and use confidence and
    prominence values to document uncertainty.
 
+## Visual Atlas Notes
+
+- The first atlas is a static SVG/CSS world-plane scatter view, not a geographic
+  map engine. It projects each record's `coordinates.lat` and `coordinates.lon`
+  onto a simple equirectangular plane so the app stays static-hosting friendly,
+  privacy-respecting, and dependency-light.
+- The atlas is intended as orientation and palette browsing, not as a precise
+  cartographic product. Future PRs can improve projection details, collision
+  handling, or optional map layers without changing the data model.
+
 ## Export Notes
 
+- JSON, city-scoped CSS variables, GPL palette text, HEX copy, and the ASE text
+  placeholder are generated from the full palette array, so variable-length
+  palettes are preserved.
 - CSS exports use city-scoped variable names such as
   `--chromapolis-lisbon-1-limestone-cream` to make pasted palettes safer in
   multi-city design systems.

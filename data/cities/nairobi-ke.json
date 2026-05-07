@@ -36,6 +36,33 @@
       "confidence": 0.86,
       "official": true,
       "prominence": 0.52
+    },
+    {
+      "hex": "#BB1E2D",
+      "name": "Flag Red",
+      "layer": "symbolic",
+      "rationale": "Red is drawn from Kenya national-symbol context and is treated separately from editorial natural colors.",
+      "confidence": 0.84,
+      "official": true,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#F1F5E8",
+      "name": "Highland Haze",
+      "layer": "natural",
+      "rationale": "A soft off-white editorial tint represents highland haze, bright skies, and sunlit open space around the city.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.36
+    },
+    {
+      "hex": "#4A5D6A",
+      "name": "Civic Concrete",
+      "layer": "architectural",
+      "rationale": "A blue-gray editorial neutral references Nairobi's civic buildings, roads, and expanding high-rise fabric.",
+      "confidence": 0.55,
+      "official": false,
+      "prominence": 0.4
     }
   ],
   "sources": [
@@ -54,6 +81,6 @@
       "note": "Used to distinguish the national-symbol black from editorial natural colors."
     }
   ],
-  "notes": "Seed record; natural tones are editorial, while black is treated as official national-symbol context.",
-  "editorialSummary": "Nairobi's starter palette balances green canopy, ochre savanna, and official national-symbol black for a city identity shaped by nature, government, and growth."
+  "notes": "Seed record; natural and architectural tones are editorial, while black and red are treated as official national-symbol context visible in the capital.",
+  "editorialSummary": "Nairobi's expanded starter palette balances green canopy, ochre savanna, national-symbol black and red, highland haze, and civic concrete for a city identity shaped by nature, government, and growth."
 }

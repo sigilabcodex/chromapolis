@@ -1,4 +1,4 @@
-# Chromapolis Data Model (MVP v0.1)
+# Chromapolis Data Model (v0.3 notes)
 
 This document defines a transparent, human-editable model for city palette records.
 It is designed for local-first and static-first workflows.
@@ -41,7 +41,7 @@ Required top-level fields:
 - `country`
 - `countryCode` (ISO alpha-2 uppercase)
 - `coordinates` (`lat`, `lon`)
-- `palette` (non-empty)
+- `palette` (non-empty; schema minimum is 1 color with no fixed maximum)
 - `sources` (non-empty)
 - `editorialSummary`
 
@@ -75,3 +75,10 @@ The TS helper is intentionally minimal for editorial workflows.
 - Keep claims traceable to sources where possible.
 - Use `editorial` layer only when interpretation is intentional.
 - Revisit confidence scores as new sources are added.
+
+
+## Palette size guidance
+
+The JSON Schema and TypeScript model represent `palette` as a non-empty array, so records can contain 1 color upward. ChromaPolis does not enforce an artificial fixed maximum in the schema because future datasets may need richer research palettes or generated derivatives.
+
+For manually curated public records, the recommended editorial range is **1–9 colors**. That range keeps records readable, supports compact city identities, and still allows richer visual systems without overwhelming the current UI.

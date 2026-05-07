@@ -20,15 +20,6 @@
       "prominence": 0.62
     },
     {
-      "hex": "#2C7BB6",
-      "name": "Transit Blue",
-      "layer": "cultural",
-      "rationale": "A bright transport blue reflects station signage, rail systems, and the city's designed mobility layer.",
-      "confidence": 0.7,
-      "official": false,
-      "prominence": 0.68
-    },
-    {
       "hex": "#2B2F3A",
       "name": "Night Glass",
       "layer": "architectural",
@@ -51,9 +42,9 @@
       "url": "https://www.tokyometro.jp/lang_en/corporate/profile/ci/index.html",
       "publisher": "Tokyo Metro Co., Ltd.",
       "sourceType": "other",
-      "note": "Used as transport-brand context for the editorial transit blue."
+      "note": "Retained as transport-brand context for future mobility-layer refinement."
     }
   ],
-  "notes": "Seed record with one official metropolitan identity color and two editorial urban-system colors.",
-  "editorialSummary": "Tokyo's starter palette combines metropolitan green, transport blue, and dark skyline glass to suggest civic identity, movement, and high-density night architecture."
+  "notes": "Seed record with one official metropolitan identity color and one editorial urban-system color; intentionally compact to exercise short palettes.",
+  "editorialSummary": "Tokyo's compact starter palette combines official metropolitan green with dark skyline glass to suggest civic identity and high-density night architecture."
 }

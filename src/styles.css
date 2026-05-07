@@ -311,3 +311,132 @@ select:disabled {
     justify-content: flex-start;
   }
 }
+
+.view-tabs {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  gap: 0.35rem;
+  border: 1px solid #d8dbe3;
+  border-radius: 999px;
+  background: #fff;
+  padding: 0.25rem;
+}
+
+.view-tabs button,
+.compare-selectors select,
+.compare-header .palette-actions button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  padding: 0.5rem 0.85rem;
+  background: transparent;
+}
+
+.view-tabs button.active {
+  background: #273248;
+  color: #fff;
+}
+
+.compare-panel {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.compare-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.compare-header h2,
+.compare-card h3 {
+  margin: 0;
+}
+
+.compare-header p,
+.compare-card header p {
+  margin: 0.3rem 0 0;
+  color: #556075;
+}
+
+.compare-selectors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.compare-selectors label {
+  display: grid;
+  gap: 0.35rem;
+  color: #4f5a70;
+  font-weight: 600;
+}
+
+.compare-selectors select,
+.compare-header .palette-actions button {
+  border-color: #bec3cf;
+  background: #fff;
+}
+
+.comparison-notes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.comparison-notes div {
+  border: 1px solid #e3e6ee;
+  border-radius: 0.55rem;
+  padding: 0.75rem;
+  background: #fafbfd;
+}
+
+.comparison-notes span {
+  display: block;
+  color: #5d687c;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.comparison-notes strong {
+  display: block;
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.compare-card {
+  border: 1px solid #dde1ea;
+  border-radius: 0.65rem;
+  padding: 0.8rem;
+  background: linear-gradient(180deg, #ffffff 0%, #fafbfd 100%);
+}
+
+.compare-palette {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.compare-color-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.65rem;
+}
+
+@media (max-width: 860px) {
+  .compare-header {
+    flex-direction: column;
+  }
+}

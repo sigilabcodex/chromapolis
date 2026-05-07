@@ -13,7 +13,7 @@ interface CityManifest {
   cities: CityManifestEntry[];
 }
 
-interface DataLoadDiagnostics {
+export interface DataLoadDiagnostics {
   errors: string[];
   invalidEntries: number;
   loadedEntries: number;

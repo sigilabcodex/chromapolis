@@ -52,6 +52,7 @@ body {
 
 .search-row input,
 .search-row button,
+.city-search select,
 .palette-actions button,
 .copy-hex,
 .export-row button {
@@ -65,6 +66,30 @@ body {
 .search-row input {
   flex: 1;
   min-width: 0;
+}
+
+.city-search select {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+}
+
+.select-label {
+  margin-top: 0.85rem;
+}
+
+.search-help,
+.confidence,
+.city-meta {
+  margin: 0.35rem 0 0;
+  color: #5d687c;
+  font-size: 0.84rem;
+}
+
+button:disabled,
+select:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
 }
 
 .search-row button {
@@ -84,6 +109,61 @@ body {
   border: 1px solid #d8dbe3;
   border-radius: 0.75rem;
   padding: 1rem;
+}
+
+.dataset-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+.dataset-summary div {
+  border: 1px solid #e3e6ee;
+  border-radius: 0.55rem;
+  padding: 0.75rem;
+}
+
+.dataset-summary dt {
+  color: #5d687c;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.dataset-summary dd {
+  margin: 0.25rem 0 0;
+  font-weight: 700;
+}
+
+.city-summary h3 {
+  margin-bottom: 0.35rem;
+}
+
+.city-summary p {
+  line-height: 1.5;
+}
+
+.data-health {
+  margin-top: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.55rem;
+  background: #f8fafc;
+  padding: 0.75rem;
+}
+
+.data-health p {
+  margin: 0.35rem 0 0;
+}
+
+.data-health ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.data-health-warning {
+  border-color: #f2b66d;
+  background: #fff8ed;
 }
 
 .palette-panel {

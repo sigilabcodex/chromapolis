@@ -14,7 +14,7 @@
       "hex": "#F2D398",
       "name": "Limestone Cream",
       "layer": "architectural",
-      "rationale": "Warm limestone facades and sunlit paved squares are common in central neighborhoods.",
+      "rationale": "Warm limestone facades and sunlit paved squares anchor central Lisbon's material palette.",
       "confidence": 0.85,
       "official": false,
       "prominence": 0.8
@@ -23,37 +23,64 @@
       "hex": "#2D5A8C",
       "name": "Azulejo Blue",
       "layer": "cultural",
-      "rationale": "Blue-and-white azulejo tile traditions strongly influence Lisbon's visual identity.",
+      "rationale": "Blue azulejo tiles are one of Lisbon's most recognizable repeatable design references.",
       "confidence": 0.9,
       "official": false,
       "prominence": 0.75
     },
     {
-      "hex": "#D94E41",
-      "name": "Tram Red",
-      "layer": "editorial",
-      "rationale": "A high-contrast accent used editorially to represent transport energy and movement.",
-      "confidence": 0.65,
-      "official": false,
-      "prominence": 0.45
-    },
-    {
       "hex": "#F6E7D0",
-      "name": "Calcada Light",
+      "name": "Calçada Light",
       "layer": "architectural",
-      "rationale": "A pale editorial neutral references calçada paving, sun glare, and the bright pedestrian surfaces of central Lisbon.",
+      "rationale": "Pale calçada paving and sun glare create a useful neutral for plazas and pedestrian surfaces.",
       "confidence": 0.7,
       "official": false,
-      "prominence": 0.52
+      "prominence": 0.56
+    },
+    {
+      "hex": "#F2C94C",
+      "name": "Tram Yellow",
+      "layer": "cultural",
+      "rationale": "Historic yellow trams provide a clear transport accent without claiming civic official status.",
+      "confidence": 0.78,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#A63D2E",
+      "name": "Tile Red",
+      "layer": "architectural",
+      "rationale": "Red ceramic roofs and warm tile edges add a compact skyline accent.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#1C6E8C",
+      "name": "Tagus Blue",
+      "layer": "natural",
+      "rationale": "A deeper river blue links the palette to the Tagus and waterfront viewpoints.",
+      "confidence": 0.67,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#2F7D5F",
+      "name": "Miradouro Green",
+      "layer": "natural",
+      "rationale": "Gardened overlooks and hilltop planting add a secondary green layer to the stone-and-tile system.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.34
     }
   ],
   "sources": [
     {
-      "title": "Lisboa em Números",
+      "title": "Lisboa",
       "url": "https://www.lisboa.pt/",
       "publisher": "Câmara Municipal de Lisboa",
       "sourceType": "government",
-      "note": "Used for city background and demographic context."
+      "note": "Used for civic and city background context."
     },
     {
       "title": "Azulejos in Lisbon",
@@ -63,6 +90,6 @@
       "note": "Used to support interpretation of tile-driven color identity."
     }
   ],
-  "notes": "Seed record for data model validation; all colors are source-informed or editorial interpretations, with no official city color claim.",
-  "editorialSummary": "Lisbon's palette combines stone warmth, azulejo blue, calçada brightness, and a selective transport accent to balance material culture with editorial interpretation."
+  "notes": "Complete seed record; all colors are editorial or source-informed interpretations, with no official city color claim.",
+  "editorialSummary": "Lisbon's complete starter palette layers limestone, azulejo blue, calçada light, tram yellow, roof tile, Tagus water, and garden green into a designer-readable city system."
 }

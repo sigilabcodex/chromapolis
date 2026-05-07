@@ -1,4 +1,4 @@
-# Chromapolis Data Model (v0.3 notes)
+# Chromapolis Data Model (v0.4 notes)
 
 This document defines a transparent, human-editable model for city palette records.
 It is designed for local-first and static-first workflows.
@@ -77,8 +77,18 @@ The TS helper is intentionally minimal for editorial workflows.
 - Revisit confidence scores as new sources are added.
 
 
-## Palette size guidance
+## Palette size and completeness guidance
 
 The JSON Schema and TypeScript model represent `palette` as a non-empty array, so records can contain 1 color upward. ChromaPolis does not enforce an artificial fixed maximum in the schema because future datasets may need richer research palettes or generated derivatives.
 
 For manually curated public records, the recommended editorial range is **1–9 colors**. That range keeps records readable, supports compact city identities, and still allows richer visual systems without overwhelming the current UI.
+
+Recommended completeness labels:
+
+- **Minimal: 1–3 colors** — a cautious starter record or single-dominant identity cue.
+- **Standard: 4–6 colors** — enough range for a primary identity plus material, natural, cultural, or accent layers.
+- **Complete: 7–9 colors** — a mature record with multiple layers and practical design-system depth.
+
+Not every city must have 9 colors. A complete record should earn its depth with multiple well-rationalized layers rather than filler colors.
+
+See `docs/city-record-template.md` for a contributor-facing template and review checklist.

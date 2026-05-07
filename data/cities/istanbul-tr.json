@@ -1,0 +1,104 @@
+{
+  "slug": "istanbul",
+  "name": "Istanbul",
+  "country": "Türkiye",
+  "countryCode": "TR",
+  "region": "Istanbul Province",
+  "coordinates": {
+    "lat": 41.0082,
+    "lon": 28.9784
+  },
+  "population": 15655924,
+  "palette": [
+    {
+      "hex": "#C8102E",
+      "name": "Flag Red",
+      "layer": "official",
+      "rationale": "Turkish national red is highly visible in civic space; it is national-symbol context, not a municipal palette claim.",
+      "confidence": 0.88,
+      "official": true,
+      "prominence": 0.64
+    },
+    {
+      "hex": "#1F5F8B",
+      "name": "Bosphorus Blue",
+      "layer": "natural",
+      "rationale": "Deep blue represents the Bosphorus and the city's water-defined geography.",
+      "confidence": 0.78,
+      "official": false,
+      "prominence": 0.72
+    },
+    {
+      "hex": "#D6B56D",
+      "name": "Dome Gold",
+      "layer": "architectural",
+      "rationale": "Muted gold references mosque interiors, historic ornament, and warm monumental light.",
+      "confidence": 0.64,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#B65A3C",
+      "name": "Byzantine Brick",
+      "layer": "historical",
+      "rationale": "Brick red-brown supports Byzantine walls, cisterns, and layered historic masonry.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#2F7D67",
+      "name": "Tile Turquoise",
+      "layer": "cultural",
+      "rationale": "Turquoise evokes ceramic and tile traditions without treating them as official city colors.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.38
+    },
+    {
+      "hex": "#F1E8D4",
+      "name": "Stone Courtyard",
+      "layer": "architectural",
+      "rationale": "Warm stone offers a neutral for courtyards, pavements, and historic facades.",
+      "confidence": 0.57,
+      "official": false,
+      "prominence": 0.44
+    },
+    {
+      "hex": "#6E2F5B",
+      "name": "Tulip Purple",
+      "layer": "cultural",
+      "rationale": "A restrained purple nods to tulip culture and seasonal floral displays.",
+      "confidence": 0.48,
+      "official": false,
+      "prominence": 0.28
+    },
+    {
+      "hex": "#2C3038",
+      "name": "Ferry Charcoal",
+      "layer": "editorial",
+      "rationale": "Charcoal adds a modern transport and waterfront-infrastructure layer for interface use.",
+      "confidence": 0.45,
+      "official": false,
+      "prominence": 0.34
+    }
+  ],
+  "sources": [
+    {
+      "title": "T.C. İstanbul Valiliği - Tarihi ve Turistik Mekânlar",
+      "url": "https://www.istanbul.gov.tr/tarihi-ve-turistik-mekanlar",
+      "publisher": "Istanbul Governorship",
+      "sourceType": "government",
+      "note": "Used for historical and touristic context."
+    },
+    {
+      "title": "Gülhane Park",
+      "url": "https://istanbul.goturkiye.com/gulhane-park",
+      "publisher": "GoTürkiye",
+      "sourceType": "government",
+      "note": "Used for garden, rose, and tulip cultural context."
+    }
+  ],
+  "notes": "Complete starter record; only Turkish national red is treated as official symbolic context, while city material and cultural layers are editorial.",
+  "editorialSummary": "Istanbul's complete palette combines national red, Bosphorus blue, dome gold, Byzantine brick, tile turquoise, courtyard stone, tulip purple, and ferry charcoal."
+}

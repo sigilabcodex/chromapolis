@@ -12,30 +12,75 @@
   "palette": [
     {
       "hex": "#006341",
-      "name": "Flag Green",
+      "name": "National Green",
       "layer": "official",
-      "rationale": "National flag green anchors civic identity across the capital's public ceremonies and monuments.",
+      "rationale": "National flag green is visible in capital ceremonies and public symbolism; it is national, not a city-brand claim.",
       "confidence": 0.9,
       "official": true,
       "prominence": 0.72
     },
     {
       "hex": "#C1272D",
-      "name": "Nopal Red",
+      "name": "National Red",
       "layer": "symbolic",
-      "rationale": "A red accent references the Mexican flag and the city-origin Tenochtitlan eagle-and-nopal emblem.",
-      "confidence": 0.82,
+      "rationale": "National red supports civic-symbol contexts tied to the capital's monuments and ceremonies.",
+      "confidence": 0.86,
       "official": true,
-      "prominence": 0.66
+      "prominence": 0.62
     },
     {
       "hex": "#D7B56D",
       "name": "Cantera Gold",
       "layer": "architectural",
-      "rationale": "Editorial warm stone tone for historic-center facades, plazas, and late-afternoon light.",
+      "rationale": "Warm stone summarizes historic-center facades, plazas, and late-afternoon monumental light.",
       "confidence": 0.68,
       "official": false,
       "prominence": 0.58
+    },
+    {
+      "hex": "#5B6F3A",
+      "name": "Chapultepec Green",
+      "layer": "natural",
+      "rationale": "A muted park green represents Chapultepec, median planting, and highland urban vegetation.",
+      "confidence": 0.67,
+      "official": false,
+      "prominence": 0.52
+    },
+    {
+      "hex": "#7A2E2A",
+      "name": "Tezontle Red",
+      "layer": "architectural",
+      "rationale": "Dark volcanic tezontle and historic masonry add a grounded red-brown architectural layer.",
+      "confidence": 0.64,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#1D4E89",
+      "name": "Talavera Blue",
+      "layer": "cultural",
+      "rationale": "A ceramic blue accent references tilework and applied decorative craft visible across central Mexico.",
+      "confidence": 0.54,
+      "official": false,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#C77D2E",
+      "name": "Market Marigold",
+      "layer": "cultural",
+      "rationale": "Orange-gold captures market flowers, street food warmth, and festival color without official status.",
+      "confidence": 0.56,
+      "official": false,
+      "prominence": 0.38
+    },
+    {
+      "hex": "#3C4147",
+      "name": "Metro Asphalt",
+      "layer": "editorial",
+      "rationale": "A dark infrastructure neutral helps designers represent transit, roads, and dense urban texture.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.42
     }
   ],
   "sources": [
@@ -54,6 +99,6 @@
       "note": "Used to distinguish national-symbol colors from editorial city colors."
     }
   ],
-  "notes": "Seed record; official colors come from national symbols visible in the capital, while the stone tone is editorial.",
-  "editorialSummary": "Mexico City's starter palette pairs official national green and red with an editorial cantera gold for monumental stone, civic ceremony, and dense historic texture."
+  "notes": "Complete seed record; official flags refer to Mexican national symbols visible in the capital, while city-specific material colors remain editorial.",
+  "editorialSummary": "Mexico City's complete palette combines national civic colors with cantera, volcanic stone, parks, ceramic blue, market warmth, and infrastructure neutrals for layered urban design work."
 }

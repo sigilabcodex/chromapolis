@@ -1,4 +1,5 @@
 import type { City } from '../types/chromapolis';
+import { getPaletteCompleteness } from '../lib/paletteCompleteness';
 
 interface VisualAtlasProps {
   cities: City[];
@@ -93,7 +94,8 @@ export function VisualAtlas({ cities, selectedCity, onSelectCity }: VisualAtlasP
               <span>
                 <strong>{city.name}</strong>
                 <small>
-                  {city.countryCode} · {city.palette.length} color{city.palette.length === 1 ? '' : 's'}
+                  {city.countryCode} · {city.palette.length} color{city.palette.length === 1 ? '' : 's'} ·{' '}
+                  <span className="completeness-label">{getPaletteCompleteness(city.palette.length)}</span>
                 </small>
               </span>
             </button>

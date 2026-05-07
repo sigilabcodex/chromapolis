@@ -1,6 +1,26 @@
 {
   "cities": [
     {
+      "slug": "bangkok",
+      "countryCode": "TH",
+      "file": "bangkok-th.json"
+    },
+    {
+      "slug": "cairo",
+      "countryCode": "EG",
+      "file": "cairo-eg.json"
+    },
+    {
+      "slug": "cuautla",
+      "countryCode": "MX",
+      "file": "cuautla-mx.json"
+    },
+    {
+      "slug": "istanbul",
+      "countryCode": "TR",
+      "file": "istanbul-tr.json"
+    },
+    {
       "slug": "lisbon",
       "countryCode": "PT",
       "file": "lisbon-pt.json"
@@ -11,11 +31,6 @@
       "file": "mexico-city-mx.json"
     },
     {
-      "slug": "tokyo",
-      "countryCode": "JP",
-      "file": "tokyo-jp.json"
-    },
-    {
       "slug": "nairobi",
       "countryCode": "KE",
       "file": "nairobi-ke.json"
@@ -24,6 +39,16 @@
       "slug": "oaxaca",
       "countryCode": "MX",
       "file": "oaxaca-mx.json"
+    },
+    {
+      "slug": "tequila",
+      "countryCode": "MX",
+      "file": "tequila-mx.json"
+    },
+    {
+      "slug": "tokyo",
+      "countryCode": "JP",
+      "file": "tokyo-jp.json"
     }
   ]
 }

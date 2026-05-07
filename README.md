@@ -9,12 +9,12 @@ and renders palette exports in the browser.
 
 ## Current Project Status
 
-- Version: `0.1.0`, with the app moving through a focused `v0.3 Flexible
-  Palettes + Visual Atlas` slice.
+- Version: `0.1.0`, with the app moving through a focused `v0.4 Dataset Expansion + Palette Methodology` slice.
 - App shape: static-first frontend only; no backend, login, analytics, or heavy
   map library.
 - Dataset: manifest-driven city records in `data/cities/` with runtime
-  validation before records are exposed to the UI.
+  validation before records are exposed to the UI, plus palette completeness
+  guidance for Minimal, Standard, and Complete records.
 - UI: available city records can be searched/selected locally, selected from a
   lightweight SVG/CSS visual atlas, and viewed in the palette panel.
 - Exports: JSON, city-scoped CSS variables, GPL palette text, HEX copy,
@@ -118,16 +118,30 @@ The app uses the manifest to load city JSON files and validates each city record
 at runtime. Invalid or missing records are skipped and reported through loader
 diagnostics in the UI and browser console.
 
+## Palette Completeness
+
+ChromaPolis supports variable-length palettes because cities do not all have the same evidence, visual complexity, or design need. A careful three-color starter is better than a nine-color record padded with weak claims.
+
+Recommended curated palette sizes:
+
+- **Minimal: 1–3 colors** — cautious starter records, single dominant identity cues, or cities needing better sourcing.
+- **Standard: 4–6 colors** — useful working palettes with primary identity plus natural, material, cultural, or accent layers.
+- **Complete: 7–9 colors** — mature records with multiple defensible layers and enough range for design-system use.
+
+Not every city must have 9 colors. A palette is “complete” when its colors cover multiple well-rationalized layers rather than when it simply reaches the maximum recommended size.
+
 ## How to Add a New City Record
 
-1. Create a new JSON file in `data/cities/` using the naming pattern
-   `<city>-<country>.json`, for example `porto-pt.json`.
+1. Start from `docs/city-record-template.md`, then create a new JSON file in
+   `data/cities/` using the naming pattern `<city>-<country>.json`, for
+   example `porto-pt.json`.
 2. Match the structure in `data/cities/city.schema.json`:
    - stable lowercase `slug`,
    - city and country metadata,
    - coordinates,
    - one or more palette colors; the schema allows palettes from 1 color upward,
-     and the recommended editorial range is 1–9 colors,
+     and the recommended editorial range is 1–9 colors using Minimal, Standard,
+     and Complete completeness labels,
    - one or more source references,
    - an `editorialSummary`.
 3. Add the file to `data/cities/index.json`:
@@ -145,7 +159,9 @@ diagnostics in the UI and browser console.
    records when the app runs.
 5. Keep records human-reviewable: cite sources, distinguish official colors from
    editorial interpretation with the `official` flag, and use confidence and
-   prominence values to document uncertainty.
+   prominence values to document uncertainty. Do not mark a color official unless
+   an authoritative source supports that status; otherwise keep it editorial,
+   symbolic, architectural, cultural, historical, or natural as appropriate.
 
 ## Visual Atlas Notes
 

@@ -2,8 +2,22 @@
 
 **A Chromatic Atlas of Cities**
 
-Chromapolis is a FLOSS, privacy-respecting web app concept for exploring city color
-palettes. This MVP is intentionally lightweight and static-first.
+Chromapolis is a FLOSS, privacy-respecting web app for exploring city color
+palettes. The current milestone is a lightweight public demo: a static Vite +
+React + TypeScript application that loads auditable city records from plain JSON
+and renders palette exports in the browser.
+
+## Current Project Status
+
+- Version: `0.1.0`, preparing the `v0.2 Public Demo / GitHub Pages` milestone.
+- App shape: static-first frontend only; no backend, login, analytics, or map
+  library.
+- Dataset: manifest-driven city records in `data/cities/` with runtime
+  validation before records are exposed to the UI.
+- UI: available city records can be searched/selected locally, and the visible
+  palette panel updates from the loaded dataset.
+- Exports: JSON, CSS variables, GPL palette text, HEX copy, and a text ASE
+  placeholder are available from the palette panel.
 
 ## Principles
 
@@ -12,13 +26,17 @@ palettes. This MVP is intentionally lightweight and static-first.
 - Human-auditable dataset formats in plain text
 - Accessible and readable interface
 - Local-first friendly architecture
+- Static hosting friendly for GitHub Pages
 
 ## Project Structure
 
 ```text
 .
 ├── data/
-├── docs/
+│   └── cities/
+│       ├── city.schema.json
+│       ├── index.json
+│       └── <city>-<country>.json
 ├── src/
 │   ├── components/
 │   ├── lib/
@@ -29,21 +47,102 @@ palettes. This MVP is intentionally lightweight and static-first.
 └── vite.config.ts
 ```
 
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the Vite development server:
+
+```bash
+npm run dev
+```
+
+Then open the local URL printed by Vite, usually `http://localhost:5173`.
+
+## Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The build runs TypeScript project checks first (`tsc -b`) and then writes the
+static site to `dist/` with Vite.
+
+Preview the built site locally:
+
+```bash
+npm run preview
+```
+
+Because the public demo is configured for GitHub Pages under
+`/chromapolis/`, the Vite base path is set to that repository path in
+`vite.config.ts`.
+
+## GitHub Pages Deployment
+
+This repository includes a GitHub Actions workflow at
+`.github/workflows/pages.yml` that:
+
+1. checks out the repository,
+2. installs dependencies with `npm ci`,
+3. runs `npm run build`,
+4. uploads `dist/` as a Pages artifact, and
+5. deploys it to GitHub Pages.
+
+Manual repository settings still required:
+
+1. In GitHub, open **Settings → Pages** for `sigilabcodex/chromapolis`.
+2. Set **Build and deployment → Source** to **GitHub Actions**.
+3. Ensure Actions are enabled for the repository.
+4. Push to `main` or run the `Deploy to GitHub Pages` workflow manually.
+
+Once deployed, the site should be served from the repository Pages URL using the
+`/chromapolis/` base path.
 
 ## Data Model
 
 - TypeScript model: `src/types/chromapolis.ts`
-- Methodology and field documentation: `docs/data-model.md`
-- JSON schema and examples: `data/cities/`
+- JSON schema: `data/cities/city.schema.json`
+- Dataset manifest: `data/cities/index.json`
+- Example city record: `data/cities/lisbon-pt.json`
 
-## Setup
+The app uses the manifest to load city JSON files and validates each city record
+at runtime. Invalid or missing records are skipped and reported through loader
+diagnostics in the UI and browser console.
 
-```bash
-npm install
-npm run dev
-```
+## How to Add a New City Record
 
-Then open the local URL printed by Vite (usually `http://localhost:5173`).
+1. Create a new JSON file in `data/cities/` using the naming pattern
+   `<city>-<country>.json`, for example `porto-pt.json`.
+2. Match the structure in `data/cities/city.schema.json`:
+   - stable lowercase `slug`,
+   - city and country metadata,
+   - coordinates,
+   - one or more palette colors,
+   - one or more source references,
+   - an `editorialSummary`.
+3. Add the file to `data/cities/index.json`:
+
+   ```json
+   {
+     "slug": "porto",
+     "countryCode": "PT",
+     "file": "porto-pt.json"
+   }
+   ```
+
+4. Run `npm run build` to confirm the manifest entry and city record pass the
+   existing TypeScript/Vite build. Loader diagnostics will also report malformed
+   records when the app runs.
+5. Keep records human-reviewable: cite sources, distinguish official colors from
+   editorial interpretation with the `official` flag, and use confidence and
+   prominence values to document uncertainty.
 
 ## Scripts
 

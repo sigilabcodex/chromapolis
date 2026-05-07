@@ -1,58 +1,14 @@
 import { useMemo, useState } from 'react';
+import type { City, PaletteColor } from '../types/chromapolis';
 
-interface PaletteColor {
-  hex: string;
-  name: string;
-  layer: string;
-  rationale: string;
+function slugify(value: string) {
+  return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 }
 
-const cityPalette = {
-  city: 'Lisbon',
-  label: 'Azulejo Morning',
-  colors: [
-    {
-      hex: '#D9CBB6',
-      name: 'Limestone Facade',
-      layer: 'Base Surface',
-      rationale:
-        'Warm limestone tones from Baixa building fronts establish a quiet architectural base.'
-    },
-    {
-      hex: '#9CAFB7',
-      name: 'Tagus Mist',
-      layer: 'Atmosphere',
-      rationale:
-        'Muted blue-grey mirrors coastal haze that softens contrast through the afternoon.'
-    },
-    {
-      hex: '#4D5A71',
-      name: 'Shadow Tram',
-      layer: 'Structure',
-      rationale:
-        'Deep steel-blue references tram hardware and cast-iron street details for visual anchors.'
-    },
-    {
-      hex: '#E3A75F',
-      name: 'Terracotta Sun',
-      layer: 'Highlight',
-      rationale:
-        'A sunlit ochre accent inspired by tiled roofs and reflected evening light.'
-    },
-    {
-      hex: '#B34F3F',
-      name: 'Market Clay',
-      layer: 'Accent',
-      rationale:
-        'Earthy red adds lively contrast, echoing ceramic stalls and weathered painted doors.'
-    }
-  ] as PaletteColor[]
-};
-
-function buildCssVariables(colors: PaletteColor[]) {
-  const body = colors
+function buildCssVariables(city: City) {
+  const body = city.palette
     .map((color, index) => {
-      const slug = color.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const slug = slugify(color.name);
       return `  --city-${index + 1}-${slug}: ${color.hex};`;
     })
     .join('\n');
@@ -60,8 +16,8 @@ function buildCssVariables(colors: PaletteColor[]) {
   return `:root {\n${body}\n}`;
 }
 
-function buildGpl(colors: PaletteColor[]) {
-  const rows = colors
+function buildGpl(city: City) {
+  const rows = city.palette
     .map((color) => {
       const [r, g, b] = color.hex
         .slice(1)
@@ -74,7 +30,32 @@ function buildGpl(colors: PaletteColor[]) {
     })
     .join('\n');
 
-  return `GIMP Palette\nName: ${cityPalette.city} - ${cityPalette.label}\nColumns: 5\n#\n${rows}\n`;
+  return `GIMP Palette\nName: ${city.name} - ChromaPolis\nColumns: ${Math.min(city.palette.length, 5)}\n#\n${rows}\n`;
+}
+
+function buildPaletteJson(city: City) {
+  return JSON.stringify(
+    {
+      city: city.name,
+      country: city.country,
+      slug: city.slug,
+      editorialSummary: city.editorialSummary,
+      colors: city.palette,
+      sources: city.sources,
+    },
+    null,
+    2,
+  );
+}
+
+function buildAsePlaceholder(city: City) {
+  return [
+    'ASE_PLACEHOLDER',
+    `City: ${city.name}`,
+    `Country: ${city.country}`,
+    ...city.palette.map((color) => `${color.name}=${color.hex}`),
+    'Note: Replace this placeholder with binary ASE generation in a future iteration.',
+  ].join('\n');
 }
 
 function downloadFile(filename: string, content: string, mimeType: string) {
@@ -87,23 +68,17 @@ function downloadFile(filename: string, content: string, mimeType: string) {
   URL.revokeObjectURL(url);
 }
 
-export function PalettePanel() {
+interface PalettePanelProps {
+  city: City | null;
+}
+
+export function PalettePanel({ city }: PalettePanelProps) {
   const [status, setStatus] = useState('');
 
-  const paletteJson = useMemo(() => JSON.stringify(cityPalette, null, 2), []);
-  const paletteCss = useMemo(() => buildCssVariables(cityPalette.colors), []);
-  const paletteGpl = useMemo(() => buildGpl(cityPalette.colors), []);
-  const paletteAsePlaceholder = useMemo(
-    () =>
-      [
-        'ASE_PLACEHOLDER',
-        `City: ${cityPalette.city}`,
-        `Palette: ${cityPalette.label}`,
-        ...cityPalette.colors.map((color) => `${color.name}=${color.hex}`),
-        'Note: Replace this placeholder with binary ASE generation in a future iteration.'
-      ].join('\n'),
-    []
-  );
+  const paletteJson = useMemo(() => (city ? buildPaletteJson(city) : ''), [city]);
+  const paletteCss = useMemo(() => (city ? buildCssVariables(city) : ''), [city]);
+  const paletteGpl = useMemo(() => (city ? buildGpl(city) : ''), [city]);
+  const paletteAsePlaceholder = useMemo(() => (city ? buildAsePlaceholder(city) : ''), [city]);
 
   async function copyText(text: string, message: string) {
     if (!navigator.clipboard) {
@@ -115,24 +90,51 @@ export function PalettePanel() {
     setStatus(message);
   }
 
+  if (!city) {
+    return (
+      <section className="panel palette-panel" aria-labelledby="palette-heading">
+        <header className="palette-header">
+          <div>
+            <h2 id="palette-heading">Palette Viewer</h2>
+            <p>No valid city record selected.</p>
+          </div>
+        </header>
+        <p className="status">Add or fix city records in the dataset to view palettes.</p>
+      </section>
+    );
+  }
+
+  function exportFile(extension: string, content: string, mimeType: string) {
+    if (!city) return;
+    downloadFile(`${city.slug}-palette.${extension}`, content, mimeType);
+  }
+
+  function copyHex(color: PaletteColor) {
+    return copyText(color.hex, `${color.hex} copied.`);
+  }
+
   return (
     <section className="panel palette-panel" aria-labelledby="palette-heading">
       <header className="palette-header">
         <div>
           <h2 id="palette-heading">Palette Viewer</h2>
           <p>
-            {cityPalette.city} · {cityPalette.label}
+            {city.name}, {city.country} · {city.palette.length} colors
           </p>
         </div>
         <div className="palette-actions">
-          <button type="button" onClick={() => copyText(paletteJson, 'Palette JSON copied.')}>copy palette as JSON</button>
-          <button type="button" onClick={() => copyText(paletteCss, 'Palette CSS variables copied.')}>copy palette as CSS variables</button>
+          <button type="button" onClick={() => copyText(paletteJson, 'Palette JSON copied.')}>
+            copy palette as JSON
+          </button>
+          <button type="button" onClick={() => copyText(paletteCss, 'Palette CSS variables copied.')}>
+            copy palette as CSS variables
+          </button>
         </div>
       </header>
 
-      <ul className="palette-grid" aria-label={`${cityPalette.city} color palette`}>
-        {cityPalette.colors.map((color) => (
-          <li key={color.hex} className="color-card">
+      <ul className="palette-grid" aria-label={`${city.name} color palette`}>
+        {city.palette.map((color) => (
+          <li key={`${city.slug}-${color.hex}-${color.name}`} className="color-card">
             <span className="swatch swatch-lg" style={{ background: color.hex }} aria-hidden="true" />
             <div className="color-meta">
               <div className="color-row">
@@ -141,6 +143,10 @@ export function PalettePanel() {
               </div>
               <p className="layer-label">{color.layer}</p>
               <p className="rationale">{color.rationale}</p>
+              <p className="confidence">
+                Confidence {Math.round(color.confidence * 100)}% · Prominence{' '}
+                {Math.round(color.prominence * 100)}%{color.official ? ' · Official' : ''}
+              </p>
             </div>
             <div className="preview-pair" aria-label="Light and dark color preview helpers">
               <div className="preview-chip preview-light" style={{ color: color.hex }}>
@@ -150,7 +156,7 @@ export function PalettePanel() {
                 Aa
               </div>
             </div>
-            <button type="button" className="copy-hex" onClick={() => copyText(color.hex, `${color.hex} copied.`)}>
+            <button type="button" className="copy-hex" onClick={() => copyHex(color)}>
               copy HEX
             </button>
           </li>
@@ -159,25 +165,24 @@ export function PalettePanel() {
 
       <div className="export-row">
         <span>Export:</span>
-        <button type="button" onClick={() => downloadFile('lisbon-palette.json', paletteJson, 'application/json')}>
+        <button type="button" onClick={() => exportFile('json', paletteJson, 'application/json')}>
           JSON
         </button>
-        <button type="button" onClick={() => downloadFile('lisbon-palette.css', paletteCss, 'text/css')}>
+        <button type="button" onClick={() => exportFile('css', paletteCss, 'text/css')}>
           CSS
         </button>
         <button
           type="button"
-          onClick={() => downloadFile('lisbon-palette.ase.txt', paletteAsePlaceholder, 'text/plain')}
+          onClick={() => exportFile('ase.txt', paletteAsePlaceholder, 'text/plain')}
           title="Placeholder text export for future ASE binary support"
         >
           ASE
         </button>
-        <button type="button" onClick={() => downloadFile('lisbon-palette.gpl', paletteGpl, 'text/plain')}>
+        <button type="button" onClick={() => exportFile('gpl', paletteGpl, 'text/plain')}>
           GPL
         </button>
       </div>
-
-      {status ? <p className="status" role="status">{status}</p> : null}
+      {status ? <p className="status">{status}</p> : null}
     </section>
   );
 }

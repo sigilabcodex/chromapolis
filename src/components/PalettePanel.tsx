@@ -79,6 +79,11 @@ export function PalettePanel({ city }: PalettePanelProps) {
   const paletteCss = useMemo(() => (city ? buildCssVariables(city) : ''), [city]);
   const paletteGpl = useMemo(() => (city ? buildGpl(city) : ''), [city]);
   const paletteAsePlaceholder = useMemo(() => (city ? buildAsePlaceholder(city) : ''), [city]);
+  const paletteLayerSummary = useMemo(() => {
+    if (!city) return '';
+
+    return Array.from(new Set(city.palette.map((color) => color.layer))).join(', ');
+  }, [city]);
 
   async function copyText(text: string, message: string) {
     if (!navigator.clipboard) {
@@ -133,6 +138,26 @@ export function PalettePanel({ city }: PalettePanelProps) {
           </button>
         </div>
       </header>
+
+      <div className="palette-overview" aria-label={`${city.name} palette overview`}>
+        <div className="palette-overview-bar" role="group" aria-label={`${city.name} palette colors`}>
+          {city.palette.map((color) => (
+            <button
+              key={`${city.slug}-overview-${color.hex}-${color.name}`}
+              type="button"
+              className="palette-overview-segment"
+              style={{ background: color.hex }}
+              onClick={() => copyHex(color)}
+              aria-label={`Copy ${color.name} ${color.hex}`}
+              title={`${color.name} · ${color.hex} · ${color.layer}`}
+            />
+          ))}
+        </div>
+        <p className="palette-overview-meta">
+          {city.palette.length} color{city.palette.length === 1 ? '' : 's'}
+          {paletteLayerSummary ? ` · ${paletteLayerSummary}` : ''}
+        </p>
+      </div>
 
       <ul className="palette-grid" aria-label={`${city.name} color palette`}>
         {city.palette.map((color) => (

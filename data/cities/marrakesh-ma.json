@@ -1,0 +1,95 @@
+{
+  "slug": "marrakesh",
+  "name": "Marrakesh",
+  "country": "Morocco",
+  "countryCode": "MA",
+  "region": "Marrakesh-Safi",
+  "coordinates": {
+    "lat": 31.6295,
+    "lon": -7.9811
+  },
+  "population": 966987,
+  "palette": [
+    {
+      "hex": "#B65A3A",
+      "name": "Medina Red Earth",
+      "layer": "architectural",
+      "rationale": "Red-earth walls and ramparts are the clearest architectural cue for Marrakesh's old city.",
+      "confidence": 0.84,
+      "official": false,
+      "prominence": 0.82
+    },
+    {
+      "hex": "#D8A24A",
+      "name": "Souk Saffron",
+      "layer": "cultural",
+      "rationale": "Saffron gold gives markets, spice displays, and warm craft lighting a useful accent.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#2F6B4F",
+      "name": "Menara Olive",
+      "layer": "natural",
+      "rationale": "Deep olive green references historic gardens, groves, and planted courtyards around the city.",
+      "confidence": 0.64,
+      "official": false,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#1E5E8C",
+      "name": "Majorelle Blue",
+      "layer": "cultural",
+      "rationale": "Vivid blue is included as a cultural landmark accent associated with garden and museum imagery, not as a civic color.",
+      "confidence": 0.54,
+      "official": false,
+      "prominence": 0.3
+    },
+    {
+      "hex": "#E6CFA8",
+      "name": "Riad Plaster",
+      "layer": "architectural",
+      "rationale": "Warm plaster softens the red city base for riad interiors, courtyards, and sunlit walls.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#5A2F2A",
+      "name": "Lantern Shadow",
+      "layer": "editorial",
+      "rationale": "Dark brown gives designers a shaded souk, wood, and metalwork anchor for contrast.",
+      "confidence": 0.44,
+      "official": false,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#C97A3A",
+      "name": "Terracotta Gate",
+      "layer": "historical",
+      "rationale": "Terracotta orange bridges monumental gates, clay surfaces, and late-afternoon medina light.",
+      "confidence": 0.6,
+      "official": false,
+      "prominence": 0.52
+    }
+  ],
+  "sources": [
+    {
+      "title": "Medina of Marrakesh",
+      "url": "https://whc.unesco.org/en/list/331",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for medina, ramparts, gardens, monuments, souks, and historic urban context."
+    },
+    {
+      "title": "Marrakech",
+      "url": "https://www.visitmorocco.com/en/destinations/marrakech",
+      "publisher": "Moroccan National Tourist Office",
+      "sourceType": "government",
+      "note": "Used for official tourism framing of city landmarks and visitor-facing identity."
+    }
+  ],
+  "notes": "Complete starter record; all colors are editorial readings of architecture, gardens, markets, and atmosphere, not official city colors.",
+  "editorialSummary": "Marrakesh's starter palette centers red-earth medina walls, then adds saffron, olive garden green, landmark blue, plaster neutrals, shadow brown, and terracotta for a warm urban heritage system."
+}

@@ -1,0 +1,95 @@
+{
+  "slug": "jaipur",
+  "name": "Jaipur",
+  "country": "India",
+  "countryCode": "IN",
+  "region": "Rajasthan",
+  "coordinates": {
+    "lat": 26.9124,
+    "lon": 75.7873
+  },
+  "population": 3046163,
+  "palette": [
+    {
+      "hex": "#D88973",
+      "name": "Pink City Sandstone",
+      "layer": "architectural",
+      "rationale": "Soft pink sandstone is the central architectural cue for Jaipur's walled-city identity.",
+      "confidence": 0.86,
+      "official": false,
+      "prominence": 0.84
+    },
+    {
+      "hex": "#B85F4A",
+      "name": "Hawa Mahal Rose",
+      "layer": "architectural",
+      "rationale": "A deeper rose gives the palette a palace-facade accent inspired by Hawa Mahal and historic masonry.",
+      "confidence": 0.72,
+      "official": false,
+      "prominence": 0.62
+    },
+    {
+      "hex": "#D8A43A",
+      "name": "Amber Fort Gold",
+      "layer": "historical",
+      "rationale": "Warm gold supports palace, fort, and royal-craft associations without claiming a fixed heritage color.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#1F6F9C",
+      "name": "Blue Pottery",
+      "layer": "cultural",
+      "rationale": "Saturated blue adds a craft accent tied to Jaipur's well-known pottery and decorative arts.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.36
+    },
+    {
+      "hex": "#E9D2A8",
+      "name": "Desert Limewash",
+      "layer": "architectural",
+      "rationale": "Light warm neutral balances pink walls with courtyards, limewash, and dry Rajasthan sunlight.",
+      "confidence": 0.55,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#2E6B55",
+      "name": "Courtyard Green",
+      "layer": "natural",
+      "rationale": "Muted green represents palace courtyards, garden planting, and relief from the walled city's warm stone.",
+      "confidence": 0.46,
+      "official": false,
+      "prominence": 0.28
+    },
+    {
+      "hex": "#4A2F2A",
+      "name": "Bazaar Shadow",
+      "layer": "editorial",
+      "rationale": "Dark brown provides practical contrast for bazaars, carved wood, shaded arcades, and type use.",
+      "confidence": 0.44,
+      "official": false,
+      "prominence": 0.34
+    }
+  ],
+  "sources": [
+    {
+      "title": "Jaipur City, Rajasthan",
+      "url": "https://whc.unesco.org/en/list/1605",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for walled-city, planning, architecture, and heritage context."
+    },
+    {
+      "title": "Jaipur Tourism",
+      "url": "https://www.tourism.rajasthan.gov.in/jaipur.html",
+      "publisher": "Rajasthan Tourism",
+      "sourceType": "government",
+      "note": "Used for official tourism context, Pink City framing, forts, palaces, and crafts."
+    }
+  ],
+  "notes": "Complete starter record; all colors are editorial interpretations of architecture, craft, garden, and bazaar atmosphere.",
+  "editorialSummary": "Jaipur's starter palette centers Pink City sandstone and palace rose, then adds fort gold, blue pottery, desert limewash, courtyard green, and bazaar shadow for a warm heritage design system."
+}

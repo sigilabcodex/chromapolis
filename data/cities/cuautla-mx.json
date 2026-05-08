@@ -14,17 +14,17 @@
       "hex": "#B9552F",
       "name": "Heroic Brick",
       "layer": "historical",
-      "rationale": "A brick-red editorial tone references Cuautla's independence-era memory and historic-center masonry.",
-      "confidence": 0.48,
+      "rationale": "Brick red references Cuautla's independence memory and historic-center masonry without claiming an official color.",
+      "confidence": 0.58,
       "official": false,
-      "prominence": 0.5
+      "prominence": 0.54
     },
     {
       "hex": "#2F7D54",
       "name": "Morelos Garden Green",
       "layer": "natural",
-      "rationale": "Warm-climate planting and irrigated gardens provide the clearest everyday color layer.",
-      "confidence": 0.5,
+      "rationale": "Warm-climate planting and irrigated gardens provide a visible everyday landscape layer.",
+      "confidence": 0.55,
       "official": false,
       "prominence": 0.48
     },
@@ -32,10 +32,19 @@
       "hex": "#E7D3A1",
       "name": "Sunlit Stucco",
       "layer": "architectural",
-      "rationale": "A light stucco neutral supports colonial walls, plazas, and bright Morelos daylight.",
-      "confidence": 0.46,
+      "rationale": "Light stucco supports colonial walls, plazas, and bright Morelos daylight as a flexible neutral.",
+      "confidence": 0.52,
       "official": false,
-      "prominence": 0.44
+      "prominence": 0.46
+    },
+    {
+      "hex": "#4E5558",
+      "name": "Railway Iron",
+      "layer": "historical",
+      "rationale": "A dark iron neutral nods to the old railway setting and gives the palette a practical anchor.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.32
     }
   ],
   "sources": [
@@ -44,16 +53,16 @@
       "url": "https://cuautla.gob.mx/",
       "publisher": "Gobierno Municipal de Cuautla",
       "sourceType": "government",
-      "note": "Used for official municipal identity and civic context."
+      "note": "Used for official municipal and independence-history context."
     },
     {
-      "title": "Cuautla",
-      "url": "https://lugares.inah.gob.mx/es/node/4842",
+      "title": "Zona de Monumentos Históricos en Cuautla",
+      "url": "https://www.monumentoscuautla.inah.gob.mx/",
       "publisher": "Instituto Nacional de Antropología e Historia",
       "sourceType": "government",
-      "note": "Used for independence-history and tourism context."
+      "note": "Used for historic monument, siege, and railway-adjacent heritage context."
     }
   ],
-  "notes": "Minimal starter record intended for later sourcing review; no official city colors are claimed.",
-  "editorialSummary": "Cuautla's minimal palette gives designers a cautious starting point: historic brick, garden green, and sunlit stucco, all treated as editorial until stronger local sources are added."
+  "notes": "Standard starter record intended for later sourcing review; no official city colors are claimed.",
+  "editorialSummary": "Cuautla's standard starter palette gives designers historic brick, garden green, sunlit stucco, and railway iron as cautious editorial layers for a heroic Morelos city identity."
 }

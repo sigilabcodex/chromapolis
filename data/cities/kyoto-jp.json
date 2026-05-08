@@ -1,0 +1,95 @@
+{
+  "slug": "kyoto",
+  "name": "Kyoto",
+  "country": "Japan",
+  "countryCode": "JP",
+  "region": "Kyoto Prefecture",
+  "coordinates": {
+    "lat": 35.0116,
+    "lon": 135.7681
+  },
+  "population": 1463723,
+  "palette": [
+    {
+      "hex": "#5B3F8C",
+      "name": "Kyoto Purple",
+      "layer": "official",
+      "rationale": "Purple is treated as civic-symbol context because Kyoto-affiliated public material describes it as the official color of Kyoto.",
+      "confidence": 0.78,
+      "official": true,
+      "prominence": 0.48
+    },
+    {
+      "hex": "#C8A24A",
+      "name": "Kinkaku Gold",
+      "layer": "cultural",
+      "rationale": "Muted gold references temple ornament and the strong visitor-facing image of gilded architecture.",
+      "confidence": 0.66,
+      "official": false,
+      "prominence": 0.46
+    },
+    {
+      "hex": "#2F6B4A",
+      "name": "Garden Moss",
+      "layer": "natural",
+      "rationale": "Deep moss green reflects Kyoto's garden traditions and shaded temple landscapes.",
+      "confidence": 0.76,
+      "official": false,
+      "prominence": 0.7
+    },
+    {
+      "hex": "#E8DDC7",
+      "name": "Raked Sand",
+      "layer": "natural",
+      "rationale": "A light sand neutral gives dry gardens, stone paths, and temple courtyards a quiet base.",
+      "confidence": 0.7,
+      "official": false,
+      "prominence": 0.58
+    },
+    {
+      "hex": "#B23A2E",
+      "name": "Torii Vermilion",
+      "layer": "symbolic",
+      "rationale": "Vermilion is a symbolic shrine accent, useful for Kyoto imagery but not an official city color.",
+      "confidence": 0.6,
+      "official": false,
+      "prominence": 0.42
+    },
+    {
+      "hex": "#6E4A2E",
+      "name": "Machiya Timber",
+      "layer": "architectural",
+      "rationale": "Dark timber anchors townhouses, temple structures, and narrow street interiors.",
+      "confidence": 0.62,
+      "official": false,
+      "prominence": 0.54
+    },
+    {
+      "hex": "#8EA676",
+      "name": "Bamboo Shade",
+      "layer": "natural",
+      "rationale": "Soft bamboo green adds a calm natural accent for western hills and grove imagery.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.34
+    }
+  ],
+  "sources": [
+    {
+      "title": "Historic Monuments of Ancient Kyoto (Kyoto, Uji and Otsu Cities)",
+      "url": "https://whc.unesco.org/en/list/688/",
+      "publisher": "UNESCO World Heritage Centre",
+      "sourceType": "academic",
+      "note": "Used for temple, wooden architecture, garden, and cultural-center context."
+    },
+    {
+      "title": "About the Foundation",
+      "url": "https://www.kcif.or.jp/web/en/foundation/about/",
+      "publisher": "Kyoto City International Foundation",
+      "sourceType": "government",
+      "note": "Used for Kyoto purple as civic-symbol context."
+    }
+  ],
+  "notes": "Complete starter record with one civic-symbol color and editorial heritage, garden, architectural, and natural layers.",
+  "editorialSummary": "Kyoto's starter palette combines civic purple with temple gold, moss, raked sand, vermilion, timber, and bamboo shade for a calm heritage-and-garden design system."
+}

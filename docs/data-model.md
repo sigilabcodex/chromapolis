@@ -91,4 +91,9 @@ Recommended completeness labels:
 
 Not every city must have 9 colors. A complete record should earn its depth with multiple well-rationalized layers rather than filler colors.
 
+
+## Curated expansion batches
+
+City records are added in focused editorial batches so the atlas can grow while remaining reviewable. Early batch records should be treated as starter palettes: they are useful design references backed by public sources, but their editorial colors may be refined as stronger local documentation, official identity guidance, or image-based research becomes available.
+
 See `docs/city-record-template.md` for a contributor-facing template and review checklist.

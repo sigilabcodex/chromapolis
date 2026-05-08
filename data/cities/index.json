@@ -16,14 +16,34 @@
       "file": "cuautla-mx.json"
     },
     {
+      "slug": "cuernavaca",
+      "countryCode": "MX",
+      "file": "cuernavaca-mx.json"
+    },
+    {
       "slug": "istanbul",
       "countryCode": "TR",
       "file": "istanbul-tr.json"
     },
     {
+      "slug": "jaipur",
+      "countryCode": "IN",
+      "file": "jaipur-in.json"
+    },
+    {
+      "slug": "kyoto",
+      "countryCode": "JP",
+      "file": "kyoto-jp.json"
+    },
+    {
       "slug": "lisbon",
       "countryCode": "PT",
       "file": "lisbon-pt.json"
+    },
+    {
+      "slug": "marrakesh",
+      "countryCode": "MA",
+      "file": "marrakesh-ma.json"
     },
     {
       "slug": "mexico-city",
@@ -39,6 +59,11 @@
       "slug": "oaxaca",
       "countryCode": "MX",
       "file": "oaxaca-mx.json"
+    },
+    {
+      "slug": "tepoztlan",
+      "countryCode": "MX",
+      "file": "tepoztlan-mx.json"
     },
     {
       "slug": "tequila",

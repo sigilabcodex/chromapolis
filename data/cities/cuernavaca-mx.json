@@ -1,0 +1,77 @@
+{
+  "slug": "cuernavaca",
+  "name": "Cuernavaca",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Morelos",
+  "coordinates": {
+    "lat": 18.9242,
+    "lon": -99.2216
+  },
+  "population": 378476,
+  "palette": [
+    {
+      "hex": "#C79A55",
+      "name": "Cortés Stone",
+      "layer": "architectural",
+      "rationale": "Warm ochre stone references the Palacio de Cortés and gives the palette a historic civic base.",
+      "confidence": 0.68,
+      "official": false,
+      "prominence": 0.62
+    },
+    {
+      "hex": "#2F7D4F",
+      "name": "Borda Garden Green",
+      "layer": "natural",
+      "rationale": "Garden green reflects the botanical and shaded garden identity around Jardín Borda.",
+      "confidence": 0.74,
+      "official": false,
+      "prominence": 0.68
+    },
+    {
+      "hex": "#E8D7B2",
+      "name": "Cathedral Stucco",
+      "layer": "architectural",
+      "rationale": "A pale stucco neutral supports Cuernavaca's convent, cathedral, and historic-center walls.",
+      "confidence": 0.58,
+      "official": false,
+      "prominence": 0.5
+    },
+    {
+      "hex": "#8A3D2B",
+      "name": "Rivera Mural Earth",
+      "layer": "cultural",
+      "rationale": "Earth red gives a restrained mural and regional-history accent without implying an exact pigment match.",
+      "confidence": 0.5,
+      "official": false,
+      "prominence": 0.34
+    },
+    {
+      "hex": "#6FA3A8",
+      "name": "Fountain Blue",
+      "layer": "editorial",
+      "rationale": "Muted blue is an editorial cooling tone for fountains, water, and the city's garden-resort atmosphere.",
+      "confidence": 0.42,
+      "official": false,
+      "prominence": 0.28
+    }
+  ],
+  "sources": [
+    {
+      "title": "Centro Cultural Jardín Borda",
+      "url": "https://visitmorelos.mx/servicios/centro-cultural-jardin-borda",
+      "publisher": "Secretaría de Turismo Morelos",
+      "sourceType": "government",
+      "note": "Used for garden, botanical, fountain, and cultural-center context."
+    },
+    {
+      "title": "Museo Regional de los Pueblos de Morelos, Palacio de Cortés",
+      "url": "https://lugares.inah.gob.mx/en/node/4999",
+      "publisher": "Instituto Nacional de Antropología e Historia",
+      "sourceType": "government",
+      "note": "Used for Palacio de Cortés and museum heritage context."
+    }
+  ],
+  "notes": "Standard starter record; all colors are editorial interpretations of architecture, gardens, and cultural setting, not official municipal colors.",
+  "editorialSummary": "Cuernavaca's starter palette layers warm historic stone, garden green, pale stucco, mural earth, and fountain blue into a calm city-of-gardens system for designers."
+}

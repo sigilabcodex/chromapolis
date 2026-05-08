@@ -1,0 +1,77 @@
+{
+  "slug": "tepoztlan",
+  "name": "Tepoztlán",
+  "country": "Mexico",
+  "countryCode": "MX",
+  "region": "Morelos",
+  "coordinates": {
+    "lat": 18.9862,
+    "lon": -99.1005
+  },
+  "population": 54681,
+  "palette": [
+    {
+      "hex": "#6B7F3A",
+      "name": "Tepozteco Green",
+      "layer": "natural",
+      "rationale": "Olive green represents the protected mountain vegetation surrounding the town and Tepozteco ridge.",
+      "confidence": 0.74,
+      "official": false,
+      "prominence": 0.72
+    },
+    {
+      "hex": "#9C5A32",
+      "name": "Cliff Ochre",
+      "layer": "natural",
+      "rationale": "Warm ochre translates the rocky hillside and archaeological setting into a usable earth tone.",
+      "confidence": 0.66,
+      "official": false,
+      "prominence": 0.58
+    },
+    {
+      "hex": "#E6D1A8",
+      "name": "Convent Wall",
+      "layer": "architectural",
+      "rationale": "Light stone and plaster reference the Ex Convento de Nuestra Señora de la Natividad as a neutral layer.",
+      "confidence": 0.63,
+      "official": false,
+      "prominence": 0.52
+    },
+    {
+      "hex": "#D45A2E",
+      "name": "Chinelo Orange",
+      "layer": "cultural",
+      "rationale": "A bright orange accent nods to carnival costume energy and local festival color without fixing a single costume palette.",
+      "confidence": 0.46,
+      "official": false,
+      "prominence": 0.3
+    },
+    {
+      "hex": "#2F4F5F",
+      "name": "Mountain Dusk",
+      "layer": "editorial",
+      "rationale": "Deep blue-green adds a dusk and shadow anchor for mountain views and evening plaza use.",
+      "confidence": 0.42,
+      "official": false,
+      "prominence": 0.28
+    }
+  ],
+  "sources": [
+    {
+      "title": "Tepoztlán, Morelos",
+      "url": "https://www.gob.mx/sectur/es/articulos/tepoztlan-morelos?idiom=es",
+      "publisher": "Secretaría de Turismo, Gobierno de México",
+      "sourceType": "government",
+      "note": "Used for Pueblo Mágico, protected natural setting, convent, and Tepozteco context."
+    },
+    {
+      "title": "Zona Arqueológica Tepozteco",
+      "url": "https://www.inah.gob.mx/zonas/zona-arqueologica-tepozteco",
+      "publisher": "Instituto Nacional de Antropología e Historia",
+      "sourceType": "government",
+      "note": "Used for the archaeological site and mountain sanctuary context."
+    }
+  ],
+  "notes": "Standard starter record; colors are editorial readings of landscape, convent architecture, archaeology, and festival atmosphere.",
+  "editorialSummary": "Tepoztlán's starter palette builds around the Tepozteco landscape, with green vegetation, ochre cliff, pale convent stone, a festival orange accent, and mountain dusk as a practical anchor."
+}
